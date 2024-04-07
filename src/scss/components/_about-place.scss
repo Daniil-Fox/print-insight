@@ -1,0 +1,40 @@
+.about-place {
+  min-height: 126rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6.5rem;
+
+  &__container {
+    width: 100%;
+    flex-grow: 1;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    height: 95%;
+    width: 100%;
+    max-width: 93rem;
+    padding: 0 2rem;
+    background: linear-gradient(180deg, #fff 0%, #d9d8d4 100%);
+
+    img {
+      display: block;
+      object-fit: contain;
+      width: auto;
+      height: 100%;
+    }
+  }
+}

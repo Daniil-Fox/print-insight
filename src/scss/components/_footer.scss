@@ -1,0 +1,126 @@
+.footer {
+
+  background-color: #fff;
+
+  &__top {
+    padding: 8rem 0;
+  }
+
+  &__bottom {
+    background: #262626;
+    padding: 1.2rem 0;
+  }
+
+  &__copy {
+    font-family: var(--font6);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 134%;
+    color: #bbb;
+  }
+
+  &__city {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    .logo__top {
+      font-size: 4rem;
+    }
+
+    .logo__bottom {
+      font-size: 2rem;
+    }
+  }
+
+  &__address {}
+
+  &__col {
+    margin-bottom: 3.4rem;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__capture,
+  &__value {
+    display: block;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #131313;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.06);
+    background: #fff;
+
+    svg {
+      transition: stroke .3s ease-out;
+    }
+
+    @include hover {
+      svg {
+        &.whatsapp {
+          stroke: green;
+        }
+
+        &.telegram {
+          stroke: rgb(0, 191, 255);
+        }
+
+        &.vk {
+          stroke: rgb(0, 123, 255);
+        }
+
+        &.ok {
+          stroke: orange;
+        }
+      }
+    }
+  }
+
+  &__capture {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-nav {
+  &__item {
+    text-align: right;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #131313;
+  }
+}

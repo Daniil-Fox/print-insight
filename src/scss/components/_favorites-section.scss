@@ -1,0 +1,39 @@
+.favorites-section {
+  padding-top: 20rem;
+  padding-bottom: 10rem;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6rem 3rem;
+  }
+
+  &__buttons {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 2rem;
+  }
+
+  &__btn {
+    &--clear {
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: var(--cvet-osnova);
+    }
+
+    &--add {
+      padding: 1.8rem 8rem;
+      font-size: 2rem;
+
+      svg {
+        width: 3.7rem;
+      }
+    }
+  }
+}

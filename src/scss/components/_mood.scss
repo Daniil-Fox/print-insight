@@ -1,0 +1,52 @@
+.mood {
+  padding-top: 6rem;
+  padding-bottom: 4.5rem;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 6rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--cvet-osnova);
+
+    span {
+      color: #d1a281;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  &__item {
+    height: 64rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #939393;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__soc {
+    display: block;
+    width: 6.4rem;
+    height: 6.4rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

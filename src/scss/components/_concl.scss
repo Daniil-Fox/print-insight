@@ -1,0 +1,63 @@
+.concl {
+  position: relative;
+  min-height: 168rem;
+  background-image: url('./../img/girls-2-2x.webp'), linear-gradient(180deg, #fefefd 0%, #d6d1c8 20.41%, #666667 61%, #484849 78.8%, #252526 100%);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(#000, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  &__container {
+    flex-grow: 1;
+    padding-top: 8.3rem;
+    padding-bottom: 24.4rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    justify-content: space-between;
+  }
+
+  &__text {
+    max-width: 61rem;
+    position: relative;
+    z-index: 4;
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 4;
+    align-self: center;
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 8rem;
+    line-height: 110%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+
+    span {
+      display: block;
+
+      &:nth-child(1) {
+        margin-bottom: 2rem;
+      }
+
+      &:nth-child(2) {
+        line-height: 150%;
+      }
+    }
+  }
+}

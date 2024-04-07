@@ -1,0 +1,100 @@
+.contacts-cta {
+  margin-bottom: 6rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+
+  &__form {
+    padding: 1rem;
+    background-color: #fff;
+    background-image: url('./../img/backgrounds/green.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__body {
+    flex-grow: 1;
+    background-color: #fff;
+    text-align: center;
+    padding: 6rem;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--cvet-osnova);
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 4rem;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #000;
+  }
+
+  &__capture {
+    display: block;
+    margin-bottom: 2rem;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #000;
+  }
+
+  &__d {
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #000;
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--cvet-osnova);
+  }
+
+  &__input {
+    border: 1px solid #4a4a4a;
+  }
+
+  &__btn {
+    border: 1px solid #000;
+    width: 100%;
+    color: var(--cvet-osnova);
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}

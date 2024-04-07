@@ -1,0 +1,46 @@
+.way {
+  padding: 2.5rem;
+  box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.1);
+  background: radial-gradient(104.66% 104.66% at 50% 0%, rgb(255, 255, 255) 0%, rgb(195, 220, 203) 100%);
+  position: relative;
+
+  &__title {
+    display: block;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 4.8rem;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--cvet-osnova);
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 37rem;
+    padding-right: 12rem;
+  }
+
+  &__desc {
+    margin: 0;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--cvet-osnova);
+  }
+
+  &__logo {
+    position: absolute;
+    top: calc(100% - 7rem);
+    right: -10rem;
+    width: 21rem;
+    height: 21rem;
+    overflow: hidden;
+    border-radius: 100%;
+    background-color: #fff;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

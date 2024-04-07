@@ -1,0 +1,60 @@
+.recommend {
+  padding: 10rem 0;
+  background: #fff;
+
+  &--similar {
+    background: linear-gradient(180deg, #fff 0%, #eff3ea 100%);
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 7rem;
+
+
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0.2rem;
+      flex-grow: 1;
+      background-color: var(--cvet-osnova);
+    }
+
+    &--end {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem;
+  }
+
+  &__item {
+    height: unset;
+    min-height: 30rem;
+
+
+    .catalogue-item__image {
+      height: 27rem;
+    }
+
+    .catalogue-item__name {
+      font-size: 1.6rem;
+    }
+
+    .catalogue-item__link {
+      padding: 1.8rem;
+    }
+
+    @include hover {
+      .catalogue-item__image {
+        height: 19rem;
+      }
+    }
+  }
+}

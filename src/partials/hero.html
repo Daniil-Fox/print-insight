@@ -1,0 +1,59 @@
+<section class="hero">
+  @include('header.html')
+
+  <div class="hero__image">
+    <picture>
+      <source srcset="./img/hero-2x.webp" media="(min-width: 1900px)">
+      <source srcset="./img/hero.webp">
+      <img src="./img/hero.jpg" srcset="./img/hero-2x.jpg 2x">
+    </picture>
+  </div>
+  <div class="container hero__container">
+    <h1 class="hero__title">
+      <span>эксклюзивная</span>
+      <span>упаковка</span>
+    </h1>
+
+    <h2 class="hero__subtitle">
+      вашего бренда
+    </h2>
+    <p class="hero__desc">
+      <span>Поддерживаем</span>
+      <span class="highlite">начинающие</span>
+      <span>бренды</span>
+    </p>
+
+    <div class="hero__lines lines">
+      <div class="lines__line line line--black">
+        <div class="line__wrapper">
+          <div class="line__items">
+            <span>*</span>
+            <span>Упаковка имеет значение</span>
+            <span>*</span>
+            <span>Упаковка имеет значение</span>
+          </div>
+          <div class="line__items">
+            <span>*</span>
+            <span>Упаковка имеет значение</span>
+            <span>*</span>
+            <span>Упаковка имеет значение</span>
+          </div>
+        </div>
+      </div>
+      <div class="lines__line line line--light">
+        <div class="line__wrapper">
+          <div class="line__items line__items--reverse">
+            <span>ваш логотип и рекламная про</span>
+            <span>ваш логотип и рекламная про</span>
+          </div>
+          <div class="line__items line__items--reverse">
+            <span>ваш логотип и рекламная про</span>
+            <span>ваш логотип и рекламная про</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>

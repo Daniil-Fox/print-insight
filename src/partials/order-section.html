@@ -1,0 +1,69 @@
+<section class="order-section">
+  <div class="container">
+    <div class="item-header order-section__header">
+      <a href="#" class="item-header__back">
+        <svg width="165" height="16" viewBox="0 0 165 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.292892 8.84773C-0.0976257 8.45721 -0.0976257 7.82404 0.292892 7.43352L6.65686 1.06956C7.04738 0.679033 7.68054 0.679033 8.07108 1.06956C8.46159 1.46008 8.46159 2.09325 8.07108 2.48377L2.41422 8.14062L8.07108 13.7975C8.46159 14.188 8.46159 14.8212 8.07108 15.2117C7.68054 15.6022 7.04738 15.6022 6.65686 15.2117L0.292892 8.84773ZM165 9.14062H1V7.14062H165V9.14062Z"
+            fill="black" />
+        </svg>
+      </a>
+      <h2 class="order-section__title title3 item-header__title">
+        Оформление заказа
+      </h2>
+    </div>
+
+    <form action="#" class="order-form">
+      <span class="order-form__title">Заполните данные</span>
+
+      <label class="order-form__label">
+        <input type="text" class="order-form__input" placeholder="Ваше имя">
+      </label>
+      <label class="order-form__label">
+        <input type="text" class="order-form__input" placeholder="Ваше имя">
+      </label>
+      <textarea class="order-form__area" placeholder="Комментарий к заказу"></textarea>
+      <label class="order-form__label order-form__label--long">
+        <input type="text" class="order-form__input" placeholder="Адрес">
+      </label>
+      <label class="order-form__label order-form__label--long">
+        <input type="text" class="order-form__input" placeholder="Доп услуги">
+      </label>
+
+      <div class="order-form__total order-total">
+        <div class="order-total__row">
+          <span class="order-total__capture">Заказ на сумму</span>
+          <span class="order-total__price">10589.56 руб.</span>
+        </div>
+        <div class="order-total__row">
+          <span class="order-total__capture">Дополнительные услуги</span>
+          <span class="order-total__price">567 руб.</span>
+        </div>
+        <div class="order-total__row order-total__row--total">
+          <span class="order-total__capture">Итого</span>
+          <span class="order-total__price">123123 руб.</span>
+        </div>
+      </div>
+
+      <div class="order-form__agree">
+        <div class="order-form__btns">
+          <button class="btn-reset btn order-form__btn">
+            <span>отправить заказ</span>
+            <svg width="37" height="8" viewBox="0 0 37 8" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M36.8536 4.63481C37.0488 4.43954 37.0488 4.12296 36.8536 3.9277L33.6716 0.745719C33.4763 0.550457 33.1597 0.550457 32.9645 0.745719C32.7692 0.940981 32.7692 1.25756 32.9645 1.45283L35.7929 4.28125L32.9645 7.10968C32.7692 7.30494 32.7692 7.62152 32.9645 7.81679C33.1597 8.01205 33.4763 8.01205 33.6716 7.81679L36.8536 4.63481ZM0.5 4.78125L36.5 4.78125L36.5 3.78125L0.5 3.78125L0.5 4.78125Z" />
+            </svg>
+          </button>
+
+          <input type="checkbox" id="agree" class="order-form__check visually-hidden">
+          <label for="agree" class="order-form__rcheck">
+            <span></span>
+            <p>
+              Я ознакомился и согласен с политикой обработки персональных данных
+            </p>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/about-hero.html')
+      @include('partials/about-team.html')
+      @include('partials/about-work.html')
+      @include('partials/about-credo.html')
+      <div class="about-credo__wrapper">
+        @include('partials/about-place.html')
+        @include('partials/about-attent.html')
+      </div>
+      @include('partials/about-brands.html')
+      @include('partials/about-cta.html')
+    </main>
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>

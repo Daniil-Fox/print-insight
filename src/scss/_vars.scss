@@ -1,0 +1,25 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  --font-family: "HelveticaNeueCyr", sans-serif;
+  --second-family: "GillSansLightC", sans-serif;
+  --third-family: "GillSans", sans-serif;
+  --font3: "Sansita", sans-serif;
+  --font4: "Raleway", sans-serif;
+  --font5: "Helvetica Neue LT Std", sans-serif;
+  --font6: "Poppins", sans-serif;
+  --font7: "TT Ricordi Marmo Trial", sans-serif;
+  --font8: "Gill Sans", sans-serif;
+
+  --content-width: 152rem;
+  --container-offset: 1.5rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --hover: #0049ca;
+  --pressed: #003299;
+  --disable: #ececf0;
+  --tekst-disable: #7d7d7d;
+  --cvet-osnova: #22372b;
+  --chernyy: #212121;
+}

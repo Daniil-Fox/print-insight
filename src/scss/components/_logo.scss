@@ -1,0 +1,20 @@
+.logo {
+  text-align: center;
+
+  &__top {
+    display: block;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: var(--cvet-osnova);
+  }
+
+  &__bottom {
+    display: block;
+    font-family: var(--font5);
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--cvet-osnova);
+  }
+}

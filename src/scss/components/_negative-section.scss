@@ -1,0 +1,113 @@
+.negative-section {
+  padding: 11rem 0;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 8rem;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--cvet-osnova);
+
+    span {
+      color: #ce9a51;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9rem;
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+
+      .negative-section__content {
+        &::before {
+          right: unset;
+          left: 0;
+          transform: translate(0, -50%);
+          clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
+
+          width: 25rem;
+        }
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__content {
+    flex: 1 0 56.5rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 100%;
+      top: 50%;
+      transform: translate(50%, -50%);
+      height: 23rem;
+      width: 50rem;
+      background-color: rgba(224, 236, 225, 0.7);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #000;
+    font-weight: 300;
+    font-family: var(--second-family);
+
+    span {
+      font-family: var(--third-family);
+      font-weight: 400;
+    }
+  }
+
+  &__video {
+    flex: 0 1 auto;
+    height: 42.4rem;
+    position: relative;
+    width: 100%;
+    max-width: 86rem;
+
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+    }
+  }
+
+  &__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    border: 1px solid #fff;
+
+    svg {
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+    }
+  }
+}

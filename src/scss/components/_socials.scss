@@ -1,0 +1,30 @@
+.socials {
+  padding: 6rem 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    height: 43.3rem;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__desc {
+    margin: 0;
+    max-width: 60.8rem;
+    font-family: var(--font4);
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 175%;
+    color: #425c4c;
+  }
+}

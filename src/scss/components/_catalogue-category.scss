@@ -1,0 +1,14 @@
+.catalogue-category {
+  padding-top: 16rem;
+  padding-bottom: 15rem;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem 4rem;
+
+    &:not(:last-of-type) {
+      margin-bottom: 12rem;
+    }
+  }
+}

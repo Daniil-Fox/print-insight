@@ -1,0 +1,21 @@
+.contacts-map {
+  margin-bottom: 5rem;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #000;
+  }
+
+  &__map {
+
+    height: 33.4rem;
+    width: 100%;
+    background-color: #ccc;
+  }
+}

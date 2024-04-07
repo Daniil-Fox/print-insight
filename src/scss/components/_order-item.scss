@@ -1,0 +1,148 @@
+.order-item {
+  min-height: 64rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+
+  &--cta {
+    z-index: 4;
+    overflow: visible;
+    // margin-top: 6rem;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 92, 76, 0.77);
+    transform: translateY(100%);
+    transition: transform .5s ease-out;
+  }
+
+  @include hover {
+    &::before {
+      transform: translateY(0);
+    }
+
+    .order-item__btn {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 3;
+    margin-left: 20rem;
+    writing-mode: vertical-rl;
+
+    font-weight: 400;
+    font-size: 13.6rem;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ce9a51;
+    transform: rotate(180deg);
+  }
+
+  &__delivery {
+    backdrop-filter: blur(2.8rem);
+    background: rgba(20, 20, 20, 0.6);
+
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #fff;
+
+    padding: 4rem 2rem 3rem;
+
+    span {
+      font-weight: 700;
+      display: block;
+    }
+  }
+
+  &__cta {
+    margin-right: -8rem;
+    // margin-top: 10rem;
+    transform: translateY(6rem);
+
+    .contacts-section__item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__address {
+    margin-bottom: 5rem;
+    padding: 0 7.5rem;
+  }
+
+  &__content {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-left: 7rem;
+    position: relative;
+    z-index: 4;
+    max-width: 57rem;
+  }
+
+  &__name {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 3.2rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  &__desc {
+    font-family: var(--third-family);
+    font-weight: 400;
+    color: #fff;
+    display: block;
+    font-size: 2.4rem;
+    margin-bottom: 3.4rem;
+  }
+
+  &__btn {
+    border-color: #fff;
+    color: #fff;
+    font-size: 2.4rem;
+    gap: 2.4rem;
+    padding: 1.75rem 5rem;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+
+    span {
+      flex-shrink: 0;
+    }
+
+    svg {
+      fill: #fff;
+      width: 7rem;
+    }
+  }
+}

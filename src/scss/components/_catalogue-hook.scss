@@ -1,0 +1,20 @@
+.catalogue-hook {
+  padding-top: 16rem;
+  padding-bottom: 10rem;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.75rem;
+  }
+
+  &__btn {
+    display: block;
+    width: 32rem;
+    margin: 0 auto;
+    margin-top: 8rem;
+    font-size: 2rem;
+    padding: 1.8rem;
+    line-height: 1;
+  }
+}

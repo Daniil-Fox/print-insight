@@ -1,0 +1,30 @@
+<section class="pack">
+  <div class="container">
+    <h2 class="pack__title" data-aos="custom-fade-up">
+      <span>Брендированная упаковка</span>
+      как маркетинговый инструмент для продвижения бренда
+    </h2>
+  </div>
+  @include('pack-turn.html')
+  @include('pack-check.html')
+  <div class="pack__wrapper">
+    <div class="pack__image" data-aos="custom-fade-up" data-aos-delay="600">
+      <picture>
+        <source srcset="./img/pack/girl-2x.webp" media="(min-width: 1900px)">
+        <source srcset="./img/pack/girl.webp">
+        <img src="./img/pack/girl.png" srcset="./img/pack/girl-2x.png 2x" alt="">
+      </picture>
+    </div>
+    <div class="pack__image" data-aos="custom-fade-up" data-aos-delay="300">
+      <picture>
+        <source srcset="./img/pack/boxes-2x.webp" media="(min-width: 1900px)">
+        <source srcset="./img/pack/boxes.webp">
+        <img src="./img/pack/boxes.png" srcset="./img/pack/boxes-2x.png 2x" alt="">
+      </picture>
+    </div>
+    @include('pack-repeat.html')
+    @include('pack-spread.html')
+    @include('pack-grow.html')
+  </div>
+
+</section>

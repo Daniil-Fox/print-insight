@@ -1,0 +1,104 @@
+.work {
+  &__title {
+    margin: 0;
+    margin-bottom: 5rem;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 200%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--cvet-osnova);
+
+    span {
+      display: block;
+      font-size: 8rem;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    position: relative;
+    height: 100%;
+
+
+    &--form {
+      background-image: url('./../img/backgrounds/green-dark.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      padding: 8.4rem 19rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(2.4rem);
+        background: rgba(14, 14, 14, 0.6);
+      }
+    }
+
+    &:not(.work__item--form) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(66, 92, 76, 0.8);
+        opacity: 0;
+        transition: opacity .3s ease-out;
+      }
+
+      @include hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    left: 7.4rem;
+    bottom: 4rem;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 3.2rem;
+    color: #fff;
+  }
+
+  &__form {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 4;
+
+    display: flex;
+    flex-direction: column;
+  }
+}

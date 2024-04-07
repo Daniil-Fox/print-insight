@@ -1,0 +1,9 @@
+.delivery-order {
+  margin-bottom: 11.2rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // align-items: flex-start;
+  }
+}

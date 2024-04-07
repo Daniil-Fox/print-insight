@@ -1,0 +1,145 @@
+.services-store {
+  margin-bottom: 8rem;
+
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    max-width: 59rem;
+  }
+
+  &__container {
+    display: flex;
+    gap: 3.5rem;
+  }
+
+  &__slider {
+    width: 70%;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 12rem;
+      height: 100%;
+      top: 0;
+      left: 32.2rem;
+      border-right: .5rem solid #fff;
+      border-left: .5rem solid #fff;
+    }
+
+    .swiper {
+      margin-bottom: 2rem;
+
+      .swiper-slide {
+        &:nth-of-type(1) {
+          background-color: #eae7e2;
+        }
+
+        &:nth-of-type(2) {
+          background-color: #dbdad6;
+        }
+
+        &:nth-of-type(3) {
+          background-color: #f0efec;
+        }
+
+        &:nth-of-type(4) {
+          background-color: #e5e4e1;
+        }
+
+        &:nth-of-type(5) {
+          background-color: #d3d2d5;
+        }
+
+        &:nth-of-type(6) {
+          background-color: #dfddd9;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    display: flex;
+
+  }
+
+  &__frame {
+    flex: 1 0 44.6rem;
+  }
+
+  &__know {
+    margin: 0;
+    margin-bottom: 14rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 3rem;
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--cvet-osnova);
+
+    span {
+      display: block;
+    }
+
+    .large {
+      font-size: 4.8rem;
+    }
+
+    .medium {
+      font-weight: 500;
+    }
+
+    .highlite {
+      color: #ce9a51;
+    }
+
+    .thin {
+      font-weight: 100;
+    }
+  }
+
+  &__line {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__image {
+    height: 62rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__pagination {
+    position: static;
+
+    .swiper-pagination-bullet {
+      &-active {
+        background-color: #ce9a51;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3.6rem;
+    height: 3.6rem;
+    cursor: pointer;
+
+    &--prev {
+      left: 2.5rem;
+    }
+
+    &--next {
+      right: 2.5rem;
+    }
+  }
+}
