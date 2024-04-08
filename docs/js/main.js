@@ -31,6 +31,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_favorites__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/favorites */ "./src/js/components/favorites.js");
 /* harmony import */ var _components_favorites__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_favorites__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_gsap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/gsap */ "./src/js/components/gsap.js");
+/* harmony import */ var _components_filters__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/filters */ "./src/js/components/filters.js");
+/* harmony import */ var _components_filters__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_filters__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -399,6 +402,41 @@ if (favoritesList) {
     const card = createCard(productData);
     favoritesList.innerHTML += card;
   });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/filters.js":
+/*!**************************************!*\
+  !*** ./src/js/components/filters.js ***!
+  \**************************************/
+/***/ (() => {
+
+const filtersContainer = document.querySelector('.filters');
+const filtersBtn = document.querySelector('.catalogue-gen__header');
+const filtersClose = document.querySelector('.filters__close');
+if (filtersContainer) {
+  filtersBtn.addEventListener('click', e => {
+    filtersContainer.classList.add('active');
+  });
+  filtersClose.addEventListener('click', e => {
+    filtersContainer.classList.remove('active');
+  });
+  const filtersButtons = filtersContainer.querySelectorAll('.filters__btn');
+  const filtersContent = filtersContainer.querySelectorAll('.filters__content');
+  filtersButtons.forEach(btn => {
+    btn.addEventListener('click', e => {
+      clearActive();
+      const data = btn.dataset.filterBtn;
+      const currentContent = filtersContainer.querySelector(`.filters__content[data-filters-content="${data}"]`);
+      btn.classList.add('active');
+      currentContent.classList.add('active');
+    });
+  });
+  function clearActive() {
+    filtersButtons.forEach(btn => btn.classList.remove('active'));
+    filtersContent.forEach(content => content.classList.remove('active'));
+  }
 }
 
 /***/ }),

@@ -126,7 +126,7 @@ a {
   gap: 1.5rem;
   font-weight: 400;
   font-size: 3.6rem;
-  line-height: 120%;
+  line-height: 1;
   text-transform: uppercase;
   color: var(--cvet-osnova);
 
@@ -135,6 +135,11 @@ a {
 
   transition: color .3s ease-out;
   overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 3;
+  }
 
   svg {
     width: 13rem;
@@ -163,8 +168,7 @@ a {
     }
 
     span {
-      position: relative;
-      z-index: 3;
+
       color: #fff;
 
       transition: color .3s ease-out;
