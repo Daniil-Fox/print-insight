@@ -1,13 +1,35 @@
 .pack-grow {
   margin-bottom: 5rem;
 
+  position: relative;
+
   &__container {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
     gap: 13rem;
     width: 100%;
-    max-width: 170rem;
+    max-width: 130rem;
+    margin: 0 auto;
+
+  }
+
+  &__figure {
+    left: unset;
+    right: 20rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(100% + 3rem);
+      top: 3rem;
+      height: 1rem;
+      width: 30rem;
+      background-image: url('./../img/backgrounds/green-dark.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 
   &__content {

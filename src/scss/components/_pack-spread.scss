@@ -1,7 +1,12 @@
 .pack-spread {
   margin-bottom: 15rem;
 
+  &__figure {
+    left: 14rem;
+  }
+
   &__container {
+    position: relative;
     display: flex;
     padding-left: 57.5rem;
   }

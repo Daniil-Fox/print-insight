@@ -12,6 +12,7 @@
     display: flex;
     align-items: flex-start;
     margin-right: 6rem;
+    position: relative;
   }
 
   &__text {
@@ -81,6 +82,10 @@
         }
       }
     }
+  }
+
+  &__figure {
+    left: 16rem;
   }
 
   &__image {

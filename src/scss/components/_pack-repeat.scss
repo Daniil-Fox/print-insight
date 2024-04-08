@@ -1,8 +1,29 @@
 .pack-repeat {
   margin-bottom: 20rem;
 
+  position: relative;
+
   &__content {
     margin-left: 10rem;
     max-width: 100rem;
+  }
+
+  &__figure {
+    left: unset;
+    right: 37.4rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(100% + 3rem);
+      top: 3rem;
+      height: 1rem;
+      width: 70rem;
+
+      background-image: url('./../img/backgrounds/green-dark.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
