@@ -2,10 +2,19 @@
   padding-top: 20rem;
   padding-bottom: 7rem;
 
+  @include tablet {
+    padding-top: 9rem;
+    padding-bottom: 3.6rem;
+  }
+
   &__title {
     margin: 0 auto;
     margin-bottom: 7rem;
     max-width: 90rem;
+
+    @include tablet {
+      margin-bottom: 2rem;
+    }
   }
 
   &__container {
@@ -18,14 +27,22 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 41.5rem);
     gap: 3rem 3.5rem;
+
+    @include tablet {
+      gap: .9rem;
+    }
   }
 
   &__item {
+    height: 41.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include tablet {
+      height: 12rem;
+    }
   }
 
   &__image {
@@ -36,6 +53,20 @@
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &__logo {
+    .logo__top {
+      @include tablet {
+        font-size: 1rem;
+      }
+    }
+
+    .logo__bottom {
+      @include tablet {
+        font-size: .6rem;
+      }
     }
   }
 }

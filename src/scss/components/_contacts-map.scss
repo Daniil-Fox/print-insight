@@ -1,6 +1,10 @@
 .contacts-map {
   margin-bottom: 5rem;
 
+  @include tablet {
+    margin-bottom: 1rem;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 1.5rem;
@@ -10,6 +14,11 @@
     line-height: 120%;
     letter-spacing: 0.01em;
     color: #000;
+
+    @include tablet {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__map {
@@ -17,5 +26,9 @@
     height: 33.4rem;
     width: 100%;
     background-color: #ccc;
+
+    @include tablet {
+      height: 14rem;
+    }
   }
 }

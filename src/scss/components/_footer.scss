@@ -1,14 +1,31 @@
 .footer {
 
-  background-color: #fff;
+  background-color: #222423;
+
+  @include tablet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.9rem 2.4rem;
+    z-index: 999;
+  }
 
   &__top {
     padding: 8rem 0;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__bottom {
     background: #262626;
     padding: 1.2rem 0;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__copy {
@@ -34,15 +51,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__logo {
     .logo__top {
       font-size: 4rem;
+      color: #fff;
     }
 
     .logo__bottom {
       font-size: 2rem;
+      color: #fff;
     }
   }
 
@@ -55,7 +78,7 @@
   &__row {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.4rem;
   }
 
   &__capture,
@@ -65,7 +88,7 @@
     font-weight: 400;
     font-size: 1.6rem;
     text-transform: uppercase;
-    color: #131313;
+    color: #fff;
   }
 
   &__link {
@@ -75,30 +98,9 @@
     width: 3.2rem;
     height: 3.2rem;
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.06);
-    background: #fff;
 
     svg {
       transition: stroke .3s ease-out;
-    }
-
-    @include hover {
-      svg {
-        &.whatsapp {
-          stroke: green;
-        }
-
-        &.telegram {
-          stroke: rgb(0, 191, 255);
-        }
-
-        &.vk {
-          stroke: rgb(0, 123, 255);
-        }
-
-        &.ok {
-          stroke: orange;
-        }
-      }
     }
   }
 
@@ -121,6 +123,49 @@
     font-weight: 300;
     font-size: 1.6rem;
     text-transform: uppercase;
-    color: #131313;
+    color: #fff;
+  }
+}
+
+
+.footer-mob {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-bottom: 0.5rem;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 120%;
+    color: var(--cvet-osnova);
   }
 }

@@ -13,6 +13,10 @@
       &>.swiper-slide {
         height: 69.5rem;
 
+        @include tablet {
+          height: 34.2rem;
+        }
+
         img {
           display: block;
           height: 100%;
@@ -23,10 +27,14 @@
   }
 
   &__thumbs {
-    &>.swiper-wrapper {
+    &>.swiper>.swiper-wrapper {
       &>.swiper-slide {
         cursor: pointer;
         height: 18rem;
+
+        @include tablet {
+          height: 8.8rem;
+        }
 
         img {
           display: block;

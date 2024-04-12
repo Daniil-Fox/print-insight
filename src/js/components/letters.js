@@ -57,10 +57,10 @@ if(printWord && printWord.length > 0){
   const tlCircle = gsap.timeline()
 
   tlCircle
-  .fromTo('.hero__image', {opacity: 0}, {opacity: 1})
-  .to('.hero__image', {width: '100vw', height: '100vh', borderRadius: '0%', x: '0', y: '0'})
+  .fromTo('.hero__video', {opacity: 0}, {opacity: 1})
+  .to('.hero__video', {width: '100vw', height: '100vh', borderRadius: '0%', x: '0', y: '0'})
   .to('.hero__container', {opacity: 1})
-  .fromTo('.header', {y: -100, opacity: 0}, {y: 0, opacity: 1}, "<")
+  .fromTo('header', {y: -100, opacity: 0}, {y: 0, opacity: 1}, "<")
   .fromTo('.hero__container .lines', {opacity: 0}, {opacity: 1})
   const globalTimeline = gsap.timeline({ scrollTrigger: {
     trigger: '.main-screen',

@@ -1,11 +1,37 @@
 .pack-turn {
   padding-top: 5rem;
   padding-bottom: 28rem;
+  position: relative;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 7rem;
+  }
+
+  &__candy {
+    position: absolute;
+    left: 4rem;
+    top: -4rem;
+    width: 15.8rem;
+    height: 14.3rem;
+  }
+
+  &__boxes {
+    position: absolute;
+    left: 0;
+    bottom: -36rem;
+    width: 26.5rem;
+    height: 20.8rem;
+  }
 
   &__container {
     display: flex;
     padding-left: 8rem;
     position: relative;
+
+    @include tablet {
+      padding: 0;
+    }
   }
 
   &__content {
@@ -13,11 +39,19 @@
     align-items: flex-start;
     margin-right: 6rem;
     position: relative;
+
+    @include tablet {
+      margin-right: 0;
+      padding-right: 13.7rem;
+      padding-left: 2.4rem;
+      padding-top: 4.6rem;
+    }
   }
 
   &__text {
     width: 100%;
     max-width: 60rem;
+    position: relative;
   }
 
 
@@ -28,6 +62,10 @@
     justify-content: flex-end;
     margin-right: 13rem;
     transform: translateY(25rem);
+
+    @include tablet {
+      display: none;
+    }
 
     .pack-turn {
       &__img {
@@ -86,17 +124,27 @@
 
   &__figure {
     left: 16rem;
+
+    @include tablet {
+      left: 2.4rem;
+    }
   }
 
   &__image {
     width: 100%;
-    max-width: 80rem;
-    height: 110rem;
+    max-width: 97rem;
+    height: 145rem;
     position: absolute;
     z-index: -1;
-    right: -3rem;
+    right: -12rem;
     top: 50%;
     transform: translateY(-50%);
+
+    @include tablet {
+      height: 33.6rem;
+      max-width: 28rem;
+      right: -10rem;
+    }
 
     img {
       width: 100%;

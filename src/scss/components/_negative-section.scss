@@ -2,6 +2,11 @@
   padding: 11rem 0;
   padding-top: 20rem;
 
+  @include tablet {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 2rem;
@@ -12,6 +17,11 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.6rem;
+      margin-bottom: 5rem;
+    }
 
     span {
       color: #ce9a51;
@@ -24,8 +34,17 @@
     justify-content: space-between;
     gap: 9rem;
 
+    @include tablet {
+      flex-direction: column;
+      gap: 5rem;
+    }
+
     &:nth-child(odd) {
       flex-direction: row-reverse;
+
+      @include tablet {
+        flex-direction: column;
+      }
 
       .negative-section__content {
         &::before {
@@ -35,18 +54,34 @@
           clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
 
           width: 25rem;
+
+          @include tablet {
+            width: 20rem;
+            left: unset;
+            right: 100%;
+            top: 50%;
+            transform: translate(60%, -50%);
+          }
         }
       }
     }
 
     &:not(:last-of-type) {
       margin-bottom: 10rem;
+
+      @include tablet {
+        margin-bottom: 6rem;
+      }
     }
   }
 
   &__content {
     flex: 1 0 56.5rem;
     position: relative;
+
+    @include tablet {
+      flex: unset;
+    }
 
     &::before {
       content: "";
@@ -59,6 +94,11 @@
       width: 50rem;
       background-color: rgba(224, 236, 225, 0.7);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+
+      @include tablet {
+        height: 13.7rem;
+        width: 20rem;
+      }
     }
   }
 
@@ -70,6 +110,13 @@
     color: #000;
     font-weight: 300;
     font-family: var(--second-family);
+
+    @include tablet {
+      font-size: 1.2rem;
+
+    }
+
+
 
     span {
       font-family: var(--third-family);
@@ -83,6 +130,11 @@
     position: relative;
     width: 100%;
     max-width: 86rem;
+
+    @include tablet {
+      height: 14.2rem;
+      flex: unset;
+    }
 
     video {
       height: 100%;

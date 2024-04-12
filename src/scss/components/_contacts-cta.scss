@@ -1,10 +1,22 @@
 .contacts-cta {
   margin-bottom: 6rem;
 
+  @include tablet {
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 2rem;
+
+    }
   }
 
   &__form {
@@ -17,6 +29,10 @@
 
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      padding: 0.5rem;
+    }
   }
 
   &__body {
@@ -24,6 +40,10 @@
     background-color: #fff;
     text-align: center;
     padding: 6rem;
+
+    @include tablet {
+      padding: 2rem;
+    }
   }
 
   &__title {
@@ -36,6 +56,11 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.6rem;
+      margin-bottom: .5rem;
+    }
   }
 
   &__subtitle {
@@ -47,6 +72,11 @@
     line-height: 120%;
     letter-spacing: 0.01em;
     color: #000;
+
+    @include tablet {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
   }
 
   &__capture {
@@ -58,6 +88,11 @@
     line-height: 120%;
     letter-spacing: 0.01em;
     color: #000;
+
+    @include tablet {
+      font-size: 1rem;
+      margin-bottom: .5rem;
+    }
   }
 
   &__d {
@@ -68,6 +103,10 @@
     line-height: 120%;
     letter-spacing: 0.01em;
     color: #000;
+
+    @include tablet {
+      font-size: 1rem;
+    }
   }
 
   &__desc {
@@ -80,6 +119,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1rem;
+    }
   }
 
   &__input {

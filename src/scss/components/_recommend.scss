@@ -2,6 +2,10 @@
   padding: 10rem 0;
   background: #fff;
 
+  @include tablet {
+    padding: 3rem 0;
+  }
+
   &--similar {
     background: linear-gradient(180deg, #fff 0%, #eff3ea 100%);
   }
@@ -15,16 +19,30 @@
     align-items: center;
     gap: 4rem;
 
+    @include tablet {
+      font-size: 1.6rem;
+      margin-bottom: 4rem;
+    }
+
     &::after {
       content: "";
       display: block;
       height: 0.2rem;
       flex-grow: 1;
       background-color: var(--cvet-osnova);
+
+      @include tablet {
+        display: none;
+      }
     }
 
     &--end {
       flex-direction: row-reverse;
+
+      @include tablet {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
     }
   }
 
@@ -32,19 +50,35 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 3rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem 1.2rem;
+    }
   }
 
   &__item {
     height: unset;
     min-height: 30rem;
 
+    @include tablet {
+      min-height: 24rem;
+    }
 
     .catalogue-item__image {
       height: 27rem;
+
+      @include tablet {
+        height: 15rem;
+      }
     }
 
     .catalogue-item__name {
       font-size: 1.6rem;
+
+      @include tablet {
+        font-size: 1.2rem;
+      }
     }
 
     .catalogue-item__link {

@@ -1,6 +1,10 @@
 .pack {
   padding-top: 10rem;
 
+  @include tablet {
+    padding-top: 7.5rem;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 10rem;
@@ -13,23 +17,50 @@
     letter-spacing: 0.03em;
     position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      right: calc(100% + 3rem);
-      top: 0;
-      height: 6.5rem;
-      width: 40rem;
-      background-image: url('./../img/backgrounds/green-dark.jpg');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+    @include tablet {
+      font-size: 1.2rem;
+      line-height: 167%;
+      margin-bottom: 3.2rem;
+      text-align: center;
     }
+
+
 
     span {
       display: block;
       font-size: 5rem;
       line-height: 160%;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: calc(100% + 3rem);
+        top: 0;
+        height: 6.5rem;
+        width: 40rem;
+        background-image: url('./../img/backgrounds/green-dark.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include tablet {
+          width: 8rem;
+          height: .3rem;
+          right: 50%;
+          top: unset;
+          bottom: 0;
+          transform: translateX(50%);
+
+        }
+      }
+
+      @include tablet {
+        font-size: 1.6rem;
+        line-height: 125%;
+        padding-bottom: .3rem;
+        margin-bottom: 0.6rem;
+      }
     }
   }
 
@@ -48,6 +79,10 @@
     line-height: 120%;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 2rem;
+    }
   }
 
   &__image {
@@ -104,6 +139,11 @@
   color: var(--cvet-osnova);
   letter-spacing: 0.03em;
 
+  @include tablet {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
   span {
     color: #dfb57a;
   }
@@ -121,7 +161,15 @@
   line-height: 175%;
   color: #425c4c;
 
+  @include tablet {
+    font-size: 1.2rem;
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 2rem;
+
+    @include tablet {
+      margin-bottom: 1rem;
+    }
   }
 }

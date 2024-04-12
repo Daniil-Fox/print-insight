@@ -1,7 +1,7 @@
 import {Navigation, Pagination, Swiper, Thumbs} from 'swiper'
 // import {Navigation, Pagination} from 'swiper'
 import { Autoplay } from 'swiper'
-
+import { EffectFade } from 'swiper'
 new Swiper('.look__slider', {
   modules: [Autoplay],
   slidesPerView: 'auto',
@@ -15,12 +15,16 @@ new Swiper('.look__slider', {
 })
 
 
-new Swiper('.services-store__slider>.swiper', {
+const serviceSlider = new Swiper('.services-store__slider>.swiper', {
   slidesPerView: 1,
-  modules: [Navigation, Pagination, Autoplay],
+  modules: [Navigation, Pagination, Autoplay, EffectFade],
   // loop: true,
   autoplay: {
     disableOnInteraction: false,
+  },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
   },
 
   speed: 1000,
@@ -33,6 +37,42 @@ new Swiper('.services-store__slider>.swiper', {
     nextEl: '.services-store__btn--next',
 
   }
+})
+
+
+const serviceContentSlider = new Swiper('.services-store__content-slider', {
+  slidesPerView: 1,
+  modules: [EffectFade],
+
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  speed: 1000,
+})
+
+
+const serviceTitleSlider = new Swiper('.services-store__title-slider', {
+  slidesPerView: 1,
+  modules: [EffectFade],
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  speed: 1000,
+})
+
+serviceSlider.on('slideChange', (swiper) => {
+  serviceContentSlider.slideTo(serviceSlider.activeIndex)
+  serviceTitleSlider.slideTo(serviceSlider.activeIndex)
+})
+serviceTitleSlider.on('slideChange', (swiper) => {
+  serviceSlider.slideTo(serviceTitleSlider.activeIndex)
+  serviceContentSlider.slideTo(serviceTitleSlider.activeIndex)
+})
+serviceContentSlider.on('slideChange', (swiper) => {
+  serviceSlider.slideTo(serviceContentSlider.activeIndex)
+  serviceTitleSlider.slideTo(serviceContentSlider.activeIndex)
 })
 
 const itemThumbs = new Swiper('.thumbs__slider', {

@@ -1,8 +1,8 @@
 .hero {
 
   min-height: 100vh;
-  background-image: url('./../img/letters/bg.webp');
-  background-position: center, center;
+  background-image: url('./../img/main-screen-bg.webp');
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -14,11 +14,8 @@
   justify-content: center;
   align-items: center;
 
-  &__image {
+  &__video {
     position: relative;
-    // left: 50%;
-    // top: 50%;
-    // transform: translate(20%, -25%);
     width: 40rem;
     height: 40rem;
     border-radius: 100%;
@@ -27,23 +24,18 @@
     align-items: center;
     justify-content: center;
 
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 25%;
-      height: 100%;
-      background: linear-gradient(91deg, #e9ecef 0%, #e8ecee00 100%);
+    @include tablet {
+      width: 20rem;
+      height: 20rem;
     }
 
-    img {
+    video {
       position: relative;
       width: 100vw;
       height: 100vh;
       min-height: 100vh;
       min-width: 100vw;
+      object-fit: cover;
     }
 
   }
@@ -74,11 +66,10 @@
 
     position: absolute;
     z-index: 4;
-    // width: 50%;
-    // height: 50%;
-    // border-radius: 50%;
 
-
+    @include tablet {
+      padding-top: 6rem;
+    }
   }
 
   &__title {
@@ -91,11 +82,27 @@
     text-transform: uppercase;
     color: var(--cvet-osnova);
 
+    @include tablet {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: .5rem;
+      margin-bottom: .5rem;
+    }
+
     span {
       display: block;
 
+      @include tablet {
+        display: inline;
+      }
+
       &:nth-child(1) {
         font-size: 4rem;
+
+        @include tablet {
+          font-size: 2rem;
+        }
       }
 
       &:nth-child(2) {
@@ -103,6 +110,12 @@
         font-size: 6rem;
         padding-left: 7.2rem;
         font-weight: 700;
+
+        @include tablet {
+          font-size: 2rem;
+          padding-left: 0;
+          font-weight: 400;
+        }
 
         &::before {
           content: "";
@@ -113,6 +126,10 @@
           height: 3px;
           width: 30rem;
           background-color: #000;
+
+          @include tablet {
+            display: none;
+          }
         }
       }
     }
@@ -128,12 +145,19 @@
     z-index: 5;
     margin: 0;
     margin-bottom: 2rem;
-    font-family: var(--font-family);
     font-weight: 100;
     font-size: 5rem;
     line-height: 100%;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-weight: 400;
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-align: center;
+      color: #ce9a51;
+    }
   }
 
   &__desc {
@@ -146,6 +170,10 @@
     line-height: 120%;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      display: none;
+    }
 
     span {
       display: block;
@@ -160,10 +188,14 @@
 .lines {
   position: absolute;
   right: 10rem;
-  top: 13rem;
+  top: 0;
   bottom: 0;
 
   display: flex;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .line {

@@ -1,10 +1,18 @@
 .about-hero {
   padding-top: 14rem;
 
+  @include tablet {
+    padding-top: 7rem;
+  }
+
   &__container {
     display: flex;
     gap: 9rem;
-    // margin-left: calc((100% - calc(var(--container-width) - var(--container-offset))) / 2);
+    position: relative;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__content {
@@ -12,12 +20,24 @@
     text-align: center;
     width: 100%;
     max-width: 76.8rem;
+
+    @include tablet {
+      padding: 0;
+      max-width: 100%;
+      text-align: left;
+    }
   }
 
   &__title {
     position: relative;
     padding-bottom: 3rem;
     margin-bottom: 7.5rem;
+
+    @include tablet {
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+      text-align: left;
+    }
 
     &::before {
       content: "";
@@ -31,11 +51,22 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+
+      @include tablet {
+        width: 3rem;
+        height: 0.2rem;
+        transform: unset;
+        left: 0;
+      }
     }
   }
 
   &__desc {
     margin-bottom: 5rem;
+
+    @include tablet {
+      margin-bottom: 2rem;
+    }
 
     span {
       display: block;
@@ -45,6 +76,12 @@
       font-size: 3.2rem;
       text-align: center;
       color: #282626;
+
+      @include tablet {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        text-align: left;
+      }
     }
 
 
@@ -57,8 +94,26 @@
     font-weight: 300;
     font-size: 2rem;
 
+    @include tablet {
+      font-size: 1.2rem;
+      max-width: 15.5rem;
+    }
+
     &:not(:last-child) {
       margin-bottom: 3rem;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+    }
+
+    &--orient {
+      @include tablet {
+        margin-top: 1.5rem;
+        max-width: 28rem;
+        font-weight: 400;
+        color: #282626;
+      }
     }
   }
 
@@ -67,6 +122,12 @@
     max-width: 56rem;
     margin: 0 auto;
     margin-bottom: 7.5rem;
+
+    @include tablet {
+
+      margin: 0;
+
+    }
 
     span {
       display: block;
@@ -79,11 +140,21 @@
       text-transform: uppercase;
       text-align: center;
       color: var(--cvet-osnova);
+
+      @include tablet {
+        max-width: 20rem;
+        font-size: 1.2rem;
+        text-align: left;
+        margin-bottom: 0.5rem;
+      }
     }
 
     p {
       margin: 0;
 
+      @include tablet {
+        max-width: unset;
+      }
     }
   }
 
@@ -107,6 +178,10 @@
     outline: 1px solid #fff;
     outline-offset: -.8rem;
 
+    @include tablet {
+      display: none;
+    }
+
     img {
       width: 8.5rem;
       height: 8.5rem;
@@ -115,6 +190,13 @@
   }
 
   &__image {
+    @include tablet {
+      position: absolute;
+      z-index: -1;
+      right: -4rem;
+      top: -3rem;
+      width: 25rem;
+    }
 
     img {
       max-height: 96.6rem;
@@ -128,6 +210,7 @@
 
 .about-capture {
   display: block;
+  width: 100%;
   margin-bottom: 1.5rem;
   font-weight: 500;
   font-size: 4rem;
@@ -135,6 +218,11 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--cvet-osnova);
+
+  @include tablet {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .about-desc {
@@ -157,8 +245,17 @@
   text-align: center;
   color: var(--cvet-osnova);
 
+  @include tablet {
+    font-size: 2.8rem;
+    position: absolute;
+  }
+
   &--end {
     align-self: flex-end;
     transform: translate(4rem, -50%);
+
+    @include tablet {
+      transform: unset;
+    }
   }
 }

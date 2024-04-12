@@ -1,10 +1,20 @@
 .faq-section {
   padding-top: 20rem;
 
+  @include tablet {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
   &__container {
     display: flex;
     align-items: center;
     gap: 13rem;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      gap: 4rem;
+    }
   }
 
   &__images {
@@ -13,6 +23,10 @@
     flex-direction: column;
     align-items: flex-start;
     position: relative;
+
+    @include tablet {
+      flex: unset;
+    }
 
     img {
       height: 100%;
@@ -25,14 +39,27 @@
   &__title {
     text-align: center;
     margin-bottom: 6rem;
+
+    @include tablet {
+      margin-bottom: 2rem;
+      text-align: left;
+    }
   }
 
   &__item {
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--cvet-osnova);
 
+    @include tablet {
+      padding-bottom: 1rem;
+    }
+
     &:not(:last-child) {
       margin-bottom: 3rem;
+
+      @include tablet {
+        margin-bottom: 1.5rem;
+      }
     }
 
     &.active {
@@ -51,6 +78,11 @@
     font-size: 2rem;
     color: var(--cvet-osnova);
     margin-top: 2rem;
+
+    @include tablet {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
   }
 
   &__header {
@@ -64,11 +96,20 @@
       font-weight: 400;
       font-size: 2.8rem;
       color: var(--cvet-osnova);
+
+      @include tablet {
+        font-size: 1.6rem;
+      }
     }
 
     svg {
       width: 3.2rem;
       height: 3.2rem;
+
+      @include tablet {
+        width: 2rem;
+        height: 2rem;
+      }
 
       transition: transform .5s ease-out;
     }

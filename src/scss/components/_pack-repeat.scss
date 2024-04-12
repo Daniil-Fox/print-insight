@@ -1,16 +1,40 @@
 .pack-repeat {
   margin-bottom: 20rem;
 
-  position: relative;
+  @include tablet {
+    margin-bottom: 9rem;
+  }
+
+  &__container {
+    position: relative;
+
+    @include tablet {
+      margin-left: 2.4rem;
+      margin-right: 1rem;
+      position: relative;
+    }
+
+  }
 
   &__content {
     margin-left: 10rem;
     max-width: 100rem;
+
+    @include tablet {
+      max-width: 20rem;
+      padding-top: 5rem;
+      margin-left: 0;
+    }
   }
 
   &__figure {
     left: unset;
     right: 37.4rem;
+
+    @include tablet {
+      right: unset;
+      left: 0;
+    }
 
     &::after {
       content: "";
@@ -24,6 +48,10 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 }

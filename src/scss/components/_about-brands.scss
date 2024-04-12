@@ -1,6 +1,10 @@
 .about-brands {
   padding: 8rem 0;
 
+  @include tablet {
+    padding: 3rem 0;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 5rem;
@@ -11,8 +15,20 @@
     text-transform: uppercase;
     color: #ce9a51;
 
+    @include tablet {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--cvet-osnova);
+      margin: 1rem;
+    }
+
     &--end {
       text-align: right;
+
+      @include tablet {
+        text-align: center;
+      }
     }
   }
 

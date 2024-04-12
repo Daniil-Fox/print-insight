@@ -1,9 +1,49 @@
 .delivery-order {
   margin-bottom: 11.2rem;
 
+  @include tablet {
+    margin-bottom: 0;
+    padding-bottom: 3rem;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     // align-items: flex-start;
+
+    @include tablet {
+      display: block;
+      padding: 0 2.4rem;
+    }
+  }
+
+  &__form {
+    @include tablet {
+      padding: 0;
+    }
+
+    .contacts-cta__body {
+      @include tablet {
+        background-color: var(--cvet-osnova);
+      }
+    }
+
+    @include tablet {
+      .contacts-cta {
+        &__title {
+          color: #fff;
+          margin-bottom: 2rem;
+        }
+
+        &__input {
+          border-color: #fff;
+        }
+
+        &__btn {
+          border-color: #fff;
+          color: #fff;
+        }
+      }
+    }
   }
 }

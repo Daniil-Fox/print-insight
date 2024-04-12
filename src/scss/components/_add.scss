@@ -13,6 +13,11 @@
     border-right: none;
     border-left: none;
 
+    @include tablet {
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+
     &:first-child {
       border-bottom: none;
     }
@@ -24,6 +29,9 @@
     align-items: center;
     gap: 6rem;
 
+    @include tablet {
+      gap: 2rem;
+    }
 
     animation: scrollLine 30s linear infinite;
     // min-width: 100%;
@@ -42,6 +50,10 @@
     line-height: 110%;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: .8rem;
+    }
 
   }
 }

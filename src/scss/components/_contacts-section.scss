@@ -2,14 +2,27 @@
   padding: 6rem 0;
   padding-top: 16rem;
 
+  @include tablet {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8rem;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__title {
     margin-bottom: 4rem;
+
+    @include tablet {
+      margin-bottom: 2rem;
+    }
   }
 
   &__desc {
@@ -28,6 +41,20 @@
       font-family: var(--third-family);
       font-weight: 400;
     }
+
+    @include tablet {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      display: none;
+    }
+
+    &--mob {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
   }
 
   &__row {
@@ -35,8 +62,16 @@
     align-items: center;
     gap: 5rem;
 
+    @include tablet {
+      gap: 1rem;
+    }
+
     &:not(:last-of-type) {
       margin-bottom: 6rem;
+
+      @include tablet {
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -46,6 +81,12 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    @include tablet {
+      gap: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__capture,
@@ -54,6 +95,10 @@
     font-weight: 400;
     font-size: 2rem;
     color: var(--chernyy);
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
   }
 
   &__capture {
@@ -61,15 +106,28 @@
     align-items: center;
     gap: 1rem;
 
+    @include tablet {
+      gap: 0.5rem;
+    }
+
     svg {
       width: 2.4rem;
       height: 2.4rem;
+
+      @include tablet {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
     }
   }
 
   &__images {
     display: flex;
     position: relative;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__col {

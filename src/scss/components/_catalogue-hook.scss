@@ -2,10 +2,20 @@
   padding-top: 16rem;
   padding-bottom: 10rem;
 
+  @include tablet {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1.75rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
 
   &__btn {
@@ -16,5 +26,12 @@
     font-size: 2rem;
     padding: 1.8rem;
     line-height: 1;
+
+    @include tablet {
+      width: 100%;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      padding: 1.1rem;
+    }
   }
 }

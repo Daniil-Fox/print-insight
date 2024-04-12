@@ -8,6 +8,10 @@
     font-size: 2.4rem;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.8rem;
+    }
   }
 
   &__bottom {
@@ -16,5 +20,9 @@
     font-weight: 300;
     font-size: 1rem;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: .8rem;
+    }
   }
 }

@@ -1,53 +1,79 @@
 <header class="header">
   <div class="header__container container">
-    <span class="header__city">
-      <img src="./img/map-icon.png" alt="">
-      Москва и мо
-    </span>
-    <a href="./" class="logo header__logo">
+    <a href="./" class="header__logo logo" data-cursor="-lg">
       <span class="logo__top">Принт инсайт</span>
       <span class="logo__bottom">История уникального бренда</span>
     </a>
-    <div class="header__buttons">
-      <button class="header__btn btn-reset">
-        <img src="./img/search-icon.png" alt="">
-      </button>
-      <a href="./favorites.html" class="header__btn btn-reset">
-        <img src="./img/like-icon.svg" alt="">
-      </a>
-      <a href="./cart.html" class="header__btn btn-reset">
-        <img src="./img/cart-icon.png" alt="">
-      </a>
+
+    <div class="header__menu header-menu">
+      <div class="header-menu__item">
+        <div class="header-menu__icon header-nav-btn" data-cursor="-lg">
+          <img src="./img/menu-icon.png" alt="">
+        </div>
+      </div>
+      <div class="header-menu__item">
+        <div class="header-menu__icon header-search-btn" data-cursor="-lg">
+          <img src="./img/search-icon.png" alt="">
+        </div>
+      </div>
+      <div class="header-menu__item">
+        <a href="./" class="header-menu__icon" data-cursor="-lg">
+          <img src="./img/home-icon.png" alt="">
+        </a>
+      </div>
+      <div class="header-menu__item">
+        <a href="./favorites.html" class="header-menu__icon" data-cursor="-lg">
+          <img src="./img/like-icon.svg" alt="">
+        </a>
+      </div>
+      <div class="header-menu__item">
+        <a href="./cart.html" class="header-menu__icon" data-cursor="-lg">
+          <img src="./img/cart-icon.png" alt="">
+        </a>
+      </div>
     </div>
   </div>
-  <div class="header__container header__container--center container">
-    <nav class="nav header__nav">
-      <ul class="list-reset nav__list">
-        <li class="nav__item">
-          <a href="./" class="nav__link">главная</a>
-        </li>
-        <li class="nav__item">
-          <a href="./catalogue-gen.html" class="nav__link">каталог</a>
-        </li>
-        <li class="nav__item">
-          <a href="./services.html" class="nav__link">доп услуги</a>
-        </li>
-        <li class="nav__item">
-          <a href="./about.html" class="nav__link">о нас</a>
-        </li>
-        <li class="nav__item">
-          <a href="./delivery.html" class="nav__link">доставка</a>
-        </li>
-        <li class="nav__item">
-          <a href="./faq.html" class="nav__link">вопрос-ответ</a>
-        </li>
-        <li class="nav__item">
-          <a href="./contacts.html" class="nav__link">контакты</a>
-        </li>
-        <li class="nav__item">
-          <a href="./negative.html" class="nav__link">негатив</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="header__nav nav header-nav">
+    <ul class="list-reset nav__list">
+      <li class="nav__item">
+        <a href="./" class="nav__link" data-cursor="-lg">Главная</a>
+      </li>
+      <li class="nav__item">
+        <a href="./catalogue-gen.html" class="nav__link" data-cursor="-lg">Каталог</a>
+      </li>
+      <li class="nav__item">
+        <a href="./services.html" class="nav__link" data-cursor="-lg">Доп услуги</a>
+      </li>
+      <li class="nav__item">
+        <a href="./about.html" class="nav__link" data-cursor="-lg">О нас</a>
+      </li>
+      <li class="nav__item">
+        <a href="./delivery.html" class="nav__link" data-cursor="-lg">Доставка</a>
+      </li>
+      <li class="nav__item">
+        <a href="./faq.html" class="nav__link" data-cursor="-lg">Вопрос-ответ</a>
+      </li>
+      <li class="nav__item">
+        <a href="./contacts.html" class="nav__link" data-cursor="-lg">Контакты</a>
+      </li>
+      <li class="nav__item">
+        <a href="./negative.html" class="nav__link" data-cursor="-lg">Негатив</a>
+      </li>
+    </ul>
+  </nav>
+
+  <form action="#" class="header__search header-search">
+    <div class="container header-search__container">
+      <label class="header-search__label">
+        <input type="text" class="header-search__input" placeholder="Введите ваш запрос">
+        <button class="btn-reset header-search__btn" data-cursor="-lg">
+          <svg width="36" height="9" viewBox="0 0 36 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M35.3536 4.85355C35.5488 4.65829 35.5488 4.34171 35.3536 4.14645L32.1716 0.964466C31.9763 0.769204 31.6597 0.769204 31.4645 0.964466C31.2692 1.15973 31.2692 1.47631 31.4645 1.67157L34.2929 4.5L31.4645 7.32843C31.2692 7.52369 31.2692 7.84027 31.4645 8.03553C31.6597 8.2308 31.9763 8.2308 32.1716 8.03553L35.3536 4.85355ZM0 5H35V4H0V5Z"
+              fill="#4B4747" />
+          </svg>
+        </button>
+      </label>
+    </div>
+  </form>
 </header>

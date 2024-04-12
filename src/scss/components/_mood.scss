@@ -2,6 +2,12 @@
   padding-top: 6rem;
   padding-bottom: 4.5rem;
 
+  @include tablet {
+    margin-top: 5.4rem;
+    padding-bottom: 4rem;
+    padding-top: 0;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 6rem;
@@ -13,6 +19,11 @@
     text-transform: uppercase;
     color: var(--cvet-osnova);
 
+    @include tablet {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+
     span {
       color: #d1a281;
     }
@@ -23,6 +34,12 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
     margin-bottom: 4rem;
+
+    @include tablet {
+      display: flex;
+      gap: 1.8rem;
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__item {
@@ -30,18 +47,33 @@
     border-radius: 1rem;
     overflow: hidden;
     background: #939393;
+
+    @include tablet {
+      height: 37rem;
+      width: 21.5rem;
+      flex-shrink: 0;
+    }
   }
 
   &__socials {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2.5rem;
+
+    @include tablet {
+      gap: .5rem;
+    }
   }
 
   &__soc {
     display: block;
-    width: 6.4rem;
-    height: 6.4rem;
+    width: 2.8rem;
+    height: 2.8rem;
+
+    @include tablet {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
 
     img {
       width: 100%;

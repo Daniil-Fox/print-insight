@@ -24,6 +24,12 @@
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
+
+
+          @include tablet {
+            width: 0.6rem;
+            height: 0.6rem;
+          }
         }
       }
 
@@ -32,6 +38,10 @@
         font-size: 1.6rem;
         line-height: 120%;
         color: var(--cvet-osnova);
+
+        @include tablet {
+          font-size: .6rem;
+        }
       }
     }
   }

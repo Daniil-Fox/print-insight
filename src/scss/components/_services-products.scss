@@ -3,27 +3,53 @@
   padding-bottom: 7rem;
   background: linear-gradient(180deg, #fff 0%, #efebe2 100%);
 
+  @include tablet {
+    padding-top: 5rem;
+  }
+
   &__container {
     display: flex;
     gap: 6rem;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__col {
     &:nth-child(1) {
       flex-basis: 62rem;
+
+      @include tablet {
+        flex-basis: unset;
+      }
     }
 
     &:nth-child(2) {
       flex-basis: 38rem;
+
+      @include tablet {
+        flex-basis: unset;
+      }
     }
 
     &:nth-child(3) {
       flex-basis: 38rem;
+
+      @include tablet {
+        flex-basis: unset;
+      }
     }
   }
 
   &__header {
     margin-bottom: 7rem;
+
+    @include tablet {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -40,6 +66,11 @@
     .highlite {
       color: #ce9a51;
     }
+
+    @include tablet {
+      font-size: 1.6rem;
+      margin-right: 0;
+    }
   }
 
   &__desc {
@@ -52,6 +83,12 @@
     text-transform: uppercase;
     color: #1f1f1f;
     font-weight: 100;
+
+    @include tablet {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 3rem;
+    }
   }
 
   &__col {
@@ -61,6 +98,10 @@
     &:nth-child(1) {
       .services-products__image {
         height: 23rem;
+
+        @include tablet {
+          height: 18rem;
+        }
       }
     }
 
@@ -68,14 +109,26 @@
       justify-content: flex-end;
       padding-bottom: 5rem;
 
+      @include tablet {
+        padding-bottom: 0;
+      }
+
       .services-products__image {
         height: 43rem;
+
+        @include tablet {
+          height: 18rem;
+        }
       }
     }
 
     &:nth-child(3) {
       .services-products__image {
         height: 44.5rem;
+
+        @include tablet {
+          height: 18rem;
+        }
       }
     }
   }
@@ -101,6 +154,11 @@
     font-size: 2.4rem;
     color: #fff;
     background-color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.4rem;
+      padding: 1.6rem 1.7rem;
+    }
 
     &--up {
       bottom: unset;

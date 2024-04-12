@@ -2,6 +2,10 @@
   padding-top: 12.5rem;
   padding-bottom: 7rem;
 
+  @include tablet {
+    padding: 3rem 0;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 5rem;
@@ -13,21 +17,53 @@
     text-transform: uppercase;
     color: var(--cvet-osnova);
 
+    @include tablet {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+    }
+
     &>span {
       line-height: 1;
       font-size: 5rem;
       display: block;
+
+      @include tablet {
+        font-size: 1.6rem;
+        max-width: 12rem;
+        margin-top: 1rem;
+      }
     }
   }
 
   &__container {
     min-height: 57.4rem;
     display: flex;
+
+    @include tablet {
+      min-height: unset;
+      flex-direction: column;
+      position: relative;
+      padding: 0 2.4rem;
+    }
   }
 
   &__image {
     flex-basis: 117.7rem;
     flex-shrink: 0;
+
+    @include tablet {
+      width: 39rem;
+      height: 19rem;
+      flex-basis: unset;
+      position: absolute;
+      top: -6rem;
+      right: -19rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__form {
@@ -35,9 +71,17 @@
     flex-grow: 0;
     flex-basis: 70rem;
 
+    @include tablet {
+      flex-basis: unset;
+    }
+
     .contacts-cta {
       &__title {
         font-size: 4.8rem;
+
+        @include tablet {
+          font-size: 2rem;
+        }
       }
     }
 
@@ -46,6 +90,11 @@
       z-index: 2;
       margin-top: -6.7rem;
       transform: translate(-16rem, 0);
+
+      @include tablet {
+        margin: 0;
+        transform: unset;
+      }
 
       &::before {
         content: "";

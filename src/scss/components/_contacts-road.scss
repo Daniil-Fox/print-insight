@@ -5,6 +5,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__item {}
@@ -13,6 +17,20 @@
     margin-bottom: 2rem;
     height: 33.4rem;
     background-color: #ccc;
+
+    @include tablet {
+      height: 14rem;
+      margin-bottom: 0;
+
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 2rem;
   }
 
   &__name {
@@ -23,6 +41,10 @@
     line-height: 120%;
     letter-spacing: 0.01em;
     color: #000;
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
   }
 
   &__row {
@@ -31,12 +53,24 @@
     justify-content: space-between;
     gap: 5rem;
     margin-bottom: 5rem;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__socials {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+
+    @include tablet {
+      gap: .5rem;
+
+    }
   }
 
   &__subtitle {
@@ -50,11 +84,20 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #000;
+
+    @include tablet {
+      font-size: 0.8rem;
+    }
   }
 
   &__link {
     width: 4rem;
     height: 4rem;
+
+    @include tablet {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
 
     img {
       width: 100%;

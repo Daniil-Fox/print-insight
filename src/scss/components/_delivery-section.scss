@@ -2,10 +2,21 @@
   padding-top: 18rem;
   margin-bottom: 12rem;
 
+  @include tablet {
+    padding-top: 9rem;
+  }
+
   &__title {
     margin-bottom: 4rem;
     display: inline-block;
     position: relative;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin-bottom: 2rem;
+    }
 
     &::after {
       content: "";
@@ -16,6 +27,12 @@
       height: 0.2rem;
       width: 300rem;
       background-color: var(--cvet-osnova);
+
+      @include tablet {
+        flex-grow: 1;
+        width: unset;
+        position: static;
+      }
     }
   }
 
@@ -29,6 +46,11 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
   }
 
   &__row {
@@ -36,6 +58,11 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 8rem;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__wraning {
@@ -50,6 +77,11 @@
   max-width: 49rem;
   padding: 1.2rem 0;
   padding-right: 10rem;
+
+  @include tablet {
+    padding: 2rem .5rem;
+    max-width: unset;
+  }
 
   &::before {
     content: "";
@@ -76,6 +108,11 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #fff;
+
+    @include tablet {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__desc {
@@ -89,8 +126,16 @@
     text-transform: uppercase;
     color: #fff;
 
+    @include tablet {
+      font-size: 1.2rem;
+    }
+
     &:not(:last-child) {
       margin-bottom: 2rem;
+
+      @include tablet {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 }

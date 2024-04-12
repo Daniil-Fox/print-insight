@@ -17,7 +17,7 @@ AOS.init({
 
 
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 150, // offset (in px) from the original trigger point
+  offset: 100, // offset (in px) from the original trigger point
   delay: 0, // values from 0 to 3000, with step 50ms
   duration: 800, // values from 0 to 3000, with step 50ms
   easing: 'ease', // default easing for AOS animations
@@ -27,9 +27,13 @@ AOS.init({
 
 });
 
+import Rellax from 'rellax';
+const rellax = new Rellax('.rellax', {
+  center: 0.5
+});
 
-import Lenis from '@studio-freight/lenis'
-const lenis = new Lenis()
+// import Lenis from '@studio-freight/lenis'
+// const lenis = new Lenis()
 
 
 function raf(time) {
@@ -38,3 +42,48 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf)
+
+window.addEventListener('DOMContentLoaded', e => {
+  const mainVideo = document.querySelector('.hero__video video')
+
+  const srcMob = mainVideo.dataset.srcMob
+  const srcDesc = mainVideo.dataset.src
+
+  if(window.matchMedia('(max-width: 1024px)').matches){
+    mainVideo.src = srcMob
+  } else {
+    mainVideo.src = srcDesc
+  }
+  // mainVideo.play()
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      if(entries[0].isIntersecting){
+        mainVideo.play()
+      } else {
+        mainVideo.pause()
+      }
+  }, {
+    threshold: 0.1
+  })
+  observer.observe(mainVideo)
+})
+
+
+
+
+// cursor
+
+import Cursor from "./vendor/cursor";
+import Magnetic from "./vendor/magnetic";
+
+const cursor = new Cursor();
+
+
+// const magnetic = new Magnetic(el, {
+//   y: 0.2, // horizontal delta
+//   x: 0.2, // vertical delta
+//   s: 0.2, // speed
+//   rs: 0.7 // release speed
+// });
+
+cursor.setState('green-color')

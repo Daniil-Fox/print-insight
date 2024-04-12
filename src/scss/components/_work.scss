@@ -11,21 +11,35 @@
     text-align: center;
     color: var(--cvet-osnova);
 
+    @include tablet {
+      font-size: 1.6rem;
+      line-height: 120%;
+      margin-bottom: 3rem;
+    }
+
     span {
       display: block;
       font-size: 8rem;
+      font-size: 1.6rem;
     }
   }
 
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
     position: relative;
     height: 100%;
 
+    @include tablet {
+      height: 23.5rem;
+    }
 
     &--form {
       background-image: url('./../img/backgrounds/green-dark.jpg');
@@ -37,6 +51,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include tablet {
+        height: unset;
+        padding: 4.5rem 3rem;
+      }
 
       &::before {
         content: "";
@@ -90,6 +109,11 @@
     font-weight: 400;
     font-size: 3.2rem;
     color: #fff;
+
+    @include tablet {
+      left: 2rem;
+      font-size: 1.6rem;
+    }
   }
 
   &__form {

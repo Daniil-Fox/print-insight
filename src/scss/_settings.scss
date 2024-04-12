@@ -1,6 +1,10 @@
 html {
   box-sizing: border-box;
   font-size: calc(100vw / 192);
+
+  @media (max-width: 1024px) {
+    font-size: calc(100vw / 36);
+  }
 }
 
 *,
@@ -41,6 +45,10 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 4rem;
+  }
 }
 
 .main {
@@ -136,6 +144,11 @@ a {
   transition: color .3s ease-out;
   overflow: hidden;
 
+  @media (max-width: 1024px) {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+
   span {
     position: relative;
     z-index: 3;
@@ -146,6 +159,10 @@ a {
     height: auto;
     fill: #000;
     transition: fill .3s ease-out;
+
+    @media (max-width: 1024px) {
+      width: 3.7rem;
+    }
   }
 
   &::before {
@@ -197,6 +214,10 @@ a {
   text-transform: uppercase;
   text-align: center;
   color: #1f1f1f;
+
+  @media (max-width: 1024px) {
+    font-size: 1.6rem;
+  }
 }
 
 .title3 {
@@ -208,6 +229,10 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--cvet-osnova);
+
+  @media (max-width: 1024px) {
+    font-size: 1.6rem;
+  }
 }
 
 .second-screen {
@@ -239,8 +264,16 @@ a {
   margin-bottom: 4rem;
   gap: 4rem;
 
+  @media (max-width: 1024px) {
+    margin-bottom: 2rem;
+  }
+
   &__back {
     width: 16.4rem;
+
+    @media (max-width: 1024px) {
+      width: 5rem;
+    }
 
     svg {
       width: 100%;
@@ -280,4 +313,21 @@ a {
 
 [data-aos="custom-opacity"].aos-animate {
   opacity: 1;
+}
+
+.rellax {
+  transition: .5s linear;
+}
+
+.green-color {
+  &::before {
+    color: var(--cvet-osnova);
+    background-color: var(--cvet-osnova);
+  }
+}
+
+.big-cursor {
+  &::before {
+    transform: scale(2);
+  }
 }

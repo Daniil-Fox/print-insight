@@ -4,7 +4,7 @@
   z-index: 100;
   width: 100%;
   height: 100%;
-  // background-image: url('./../img/letters/bg.webp');
+
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,10 +21,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // position: absolute;
-    // left: 50%;
-    // top: 50%;
-    // transform: translate(-50%, -50%);
   }
 
   &__content {
@@ -49,25 +45,49 @@
       &__p {
         width: 13.8rem;
         margin-right: 2.6rem;
+
+        @include tablet {
+          width: 4.9rem;
+          margin-right: 1rem;
+        }
       }
 
       &__r {
         width: 11.3rem;
         margin-right: 1.5rem;
+
+        @include tablet {
+          width: 4rem;
+          margin-right: .5rem;
+        }
       }
 
       &__i {
         width: 5.8rem;
         margin-right: 1.4rem;
+
+        @include tablet {
+          width: 2rem;
+          margin-right: .5rem;
+        }
       }
 
       &__n {
         width: 12.6rem;
         margin-right: 1rem;
+
+        @include tablet {
+          width: 4.4rem;
+          margin-right: .6rem;
+        }
       }
 
       &__t {
         width: 12.3rem;
+
+        @include tablet {
+          width: 4.3rem;
+        }
       }
     }
   }
@@ -77,30 +97,59 @@
       &__i {
         width: 3.6rem;
         margin-right: 1rem;
+
+        @include tablet {
+          width: 1.3rem;
+          margin-right: .4rem;
+        }
       }
 
       &__n {
         width: 9.2rem;
         margin-right: 1.5rem;
+
+        @include tablet {
+          width: 3.3rem;
+          margin-right: .5rem;
+        }
       }
 
       &__s {
         width: 7.7rem;
         margin-right: 1.1rem;
+
+        @include tablet {
+          width: 2.7rem;
+          margin-right: .4rem;
+        }
       }
 
       &__g {
         width: 6.8rem;
         margin-right: 1.2rem;
+
+        @include tablet {
+          width: 2.4rem;
+          margin-right: .5rem;
+        }
       }
 
       &__h {
-        width: 7.6rem;
+        width: 7rem;
         margin-right: 1rem;
+
+        @include tablet {
+          width: 2.7rem;
+          margin-right: .4rem;
+        }
       }
 
       &__t {
         width: 8.4rem;
+
+        @include tablet {
+          width: 3rem;
+        }
       }
     }
   }

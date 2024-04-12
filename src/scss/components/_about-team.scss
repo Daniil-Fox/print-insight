@@ -1,11 +1,22 @@
 .about-team {
   padding: 6rem 0;
 
+  @include tablet {
+    padding: 3rem 0;
+  }
+
   &__container {
     display: flex;
     align-items: center;
     gap: 14rem;
     margin-right: calc((100% - var(--container-width)) / 2);
+    position: relative;
+
+    @include tablet {
+      display: block;
+      gap: 0;
+      margin-right: 0;
+    }
   }
 
   &__image {
@@ -13,15 +24,38 @@
     height: 80rem;
     flex-shrink: 0;
 
+    @include tablet {
+
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      bottom: 0;
+      flex-basis: unset;
+      width: 15rem;
+      height: 17.5rem;
+    }
+
     img {
       display: block;
       height: 100%;
       width: auto;
+
+      @include tablet {
+        object-fit: contain;
+      }
     }
   }
 
   &__content {
     text-align: center;
+
+    @include tablet {
+      padding-right: 2.4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
   }
 
   &__title {
@@ -33,16 +67,32 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.6rem;
+    }
   }
 
   &__text {
+    @include tablet {
+      max-width: 20rem;
+    }
+
     &:last-of-type {
       margin-bottom: 8rem;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
     }
   }
 
   &__btn {
     padding: 3rem 5rem;
+
+    @include tablet {
+      display: none;
+    }
 
     span {
       font-size: 2.8rem;

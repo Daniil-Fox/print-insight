@@ -2,12 +2,23 @@
   padding-top: 15rem;
   padding-bottom: 13rem;
 
+  @include tablet {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+
+  }
+
   &__header {
     display: flex;
     flex-direction: column;
     max-width: 136.5rem;
     margin: 0 auto;
     margin-bottom: 7.6rem;
+
+    @include tablet {
+      margin-bottom: 2rem;
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -18,11 +29,19 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.6rem;
+    }
   }
 
   &__subtitle {
     align-self: flex-end;
     margin-right: 4rem;
+
+    @include tablet {
+      align-self: flex-start;
+    }
   }
 
   &__container {
@@ -31,6 +50,13 @@
     max-width: 115rem;
     margin: 0 auto;
     gap: 6rem;
+
+    @include tablet {
+      max-width: 100%;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 5.5rem;
+    }
   }
 
   &__content {
@@ -46,6 +72,12 @@
     top: -14rem;
 
     height: 38rem;
+
+    @include tablet {
+      left: -6rem;
+      top: -3.4rem;
+      height: 15rem;
+    }
 
     &::before {
       content: "";
@@ -75,6 +107,10 @@
     position: relative;
     z-index: 2;
 
+    @include tablet {
+      height: 14rem;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -98,16 +134,32 @@
 
   &__desc {
     margin: 0;
-    margin-bottom: 2.6rem;
+
     font-family: var(--second-family);
     font-weight: 300;
     font-size: 2rem;
     line-height: 175%;
     color: #425c4c;
+
+    &:not(:last-child) {
+      margin-bottom: 2.6rem;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+    }
+
+    @include tablet {
+      font-size: 1.4rem;
+    }
   }
 
   &__btn {
     padding: 2rem 4.8rem;
+
+    @include tablet {
+      display: none;
+    }
 
     span {
       font-size: 2rem;

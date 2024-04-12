@@ -2,12 +2,17 @@
   position: relative;
   min-height: 168rem;
   background-image: url('./../img/girls-2-2x.webp'), linear-gradient(180deg, #fefefd 0%, #d6d1c8 20.41%, #666667 61%, #484849 78.8%, #252526 100%);
-  background-position: right;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 
   display: flex;
   flex-direction: column;
+
+  @include tablet {
+    min-height: 54.4rem;
+    background-position: center;
+  }
 
   &__overlay {
     position: absolute;
@@ -26,12 +31,21 @@
     flex-direction: column;
     min-height: 100%;
     justify-content: space-between;
+
+    @include tablet {
+      padding: 2.4rem;
+      padding-bottom: 7rem;
+    }
   }
 
   &__text {
     max-width: 61rem;
     position: relative;
     z-index: 4;
+
+    @include tablet {
+      max-width: 29rem;
+    }
   }
 
   &__subtitle {
@@ -48,11 +62,19 @@
     text-align: center;
     color: #fff;
 
+    @include tablet {
+      font-size: 1.6rem;
+    }
+
     span {
       display: block;
 
       &:nth-child(1) {
         margin-bottom: 2rem;
+
+        @include tablet {
+          margin-bottom: 1rem;
+        }
       }
 
       &:nth-child(2) {

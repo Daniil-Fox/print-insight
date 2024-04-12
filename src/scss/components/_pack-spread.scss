@@ -1,14 +1,38 @@
 .pack-spread {
   margin-bottom: 15rem;
+  position: relative;
+
+  &__pack {
+    position: absolute;
+    z-index: -1;
+    right: 10rem;
+    bottom: 3rem;
+    width: 50rem;
+    height: 50rem;
+  }
+
+  @include tablet {
+    margin-bottom: 4rem;
+  }
 
   &__figure {
     left: 14rem;
+
+    @include tablet {
+      left: unset;
+      right: 2.4rem;
+    }
   }
 
   &__container {
     position: relative;
     display: flex;
     padding-left: 57.5rem;
+
+    @include tablet {
+      padding-left: 0;
+      padding-right: 2.4rem;
+    }
   }
 
   &__img {
@@ -57,9 +81,22 @@
 
   &__content {
     max-width: 90rem;
+    position: relative;
+
+    @include tablet {
+      max-width: 30rem;
+      text-align: right;
+      margin-left: auto;
+      padding-top: 5rem;
+    }
   }
 
   &__desc {
     max-width: 67rem;
+
+    @include tablet {
+      max-width: 19rem;
+      margin-left: auto;
+    }
   }
 }

@@ -6,6 +6,12 @@
   z-index: 2;
 
 
+  @include tablet {
+    min-height: unset;
+    padding-bottom: 0;
+    background: linear-gradient(180deg, transparent 40%, #e1dbd6 100%, #d1cfd4 10%);
+  }
+
   &__image {
     position: absolute;
     z-index: -1;
@@ -15,6 +21,12 @@
     height: 95%;
     max-width: 127.7rem;
 
+
+    @include tablet {
+      position: static;
+      order: 4;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -22,9 +34,11 @@
       right: 0;
       height: 100%;
       width: 2rem;
-      // background: radial-gradient(78.19% 78.19% at 50% 23.41%, rgb(255, 255, 255) 0%, rgb(225, 219, 214) 100%), linear-gradient(180deg, #eeeae8 0%, #fff 100%), linear-gradient(270deg, #edebe7 0%, #e7e3df 0.01%, #ece9e6 100%);
-      // background: linear-gradient(to bottom, #ffffff00 0%, #e1dbd6 100%, #d1cfd4 100%);
       backdrop-filter: blur(2px);
+
+      @include tablet {
+        display: none;
+      }
     }
 
     img {
@@ -39,6 +53,10 @@
     flex-direction: column;
     align-items: center;
     gap: 30rem;
+
+    @include tablet {
+      gap: 2rem;
+    }
   }
 
   &__top {
@@ -46,13 +64,33 @@
     gap: 8rem;
     align-items: flex-end;
 
+    @include tablet {
+      position: relative;
+      padding-top: 5rem;
+    }
+
     .about-figure {
       line-height: 1;
+
+      @include tablet {
+        top: 0;
+        left: 0;
+      }
     }
   }
 
   &__bottom {
     text-align: right;
+
+    @include tablet {
+      position: relative;
+      padding-top: 5rem;
+
+      .about-figure {
+        top: 0;
+        right: 0;
+      }
+    }
   }
 
   &__desc {

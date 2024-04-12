@@ -1,0 +1,40 @@
+.menu-dropdown {
+  &__link {
+    border: 1px solid #000;
+    transition: color .3s ease-out, background-color .3s ease-out;
+
+    &.active {
+      background-color: var(--cvet-osnova);
+
+      color: #fff;
+    }
+  }
+
+  &__list {
+    box-sizing: content-box;
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+
+    transition: max-height .3s ease-out;
+
+  }
+
+  &__item {
+
+    &>.menu-nav__list {
+      box-sizing: content-box;
+      max-height: 0;
+      overflow: hidden;
+      will-change: max-height;
+
+      transition: max-height .3s ease-out;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+
+  }
+}

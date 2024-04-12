@@ -3,6 +3,12 @@
 
   position: relative;
 
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+
+
   &__container {
     display: flex;
     align-items: flex-start;
@@ -12,11 +18,20 @@
     max-width: 130rem;
     margin: 0 auto;
 
+    @include tablet {
+      max-width: unset;
+      padding-right: 2.4rem;
+      padding-left: 1rem;
+    }
   }
 
   &__figure {
     left: unset;
     right: 20rem;
+
+    @include tablet {
+      right: 2.4rem;
+    }
 
     &::after {
       content: "";
@@ -29,11 +44,20 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 
   &__content {
     text-align: right;
+
+    @include tablet {
+      padding-top: 5rem;
+      max-width: 21.5rem;
+    }
   }
 
   &__desc {

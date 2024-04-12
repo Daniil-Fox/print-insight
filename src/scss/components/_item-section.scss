@@ -1,6 +1,11 @@
 .item-section {
-  padding-top: 20rem;
+  padding-top: 10rem;
   padding-bottom: 12rem;
+
+  @include tablet {
+    padding-bottom: 3rem;
+    position: relative;
+  }
 
   &__progress {
     width: 87.5rem !important;
@@ -11,6 +16,10 @@
     border-radius: 2rem !important;
     overflow: hidden;
 
+    @include tablet {
+      width: 43.3rem !important;
+    }
+
     .swiper-pagination-progressbar-fill {
       background-color: #464646;
     }
@@ -20,16 +29,32 @@
     display: flex;
     gap: 4rem;
     margin-bottom: 6rem;
+
+    @include tablet {
+      flex-direction: column;
+      margin-bottom: 3rem;
+
+
+    }
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   &__gallery {
     flex: 1 0 70rem;
+
+    @include tablet {
+      flex: 1 0 auto;
+    }
   }
 
   &__content {
@@ -38,6 +63,12 @@
 
   &__breadcrumbs {
     margin-bottom: 2.5rem;
+
+    @include tablet {
+      position: absolute;
+      left: 2.4rem;
+      top: 8rem;
+    }
   }
 
   &__title {
@@ -49,10 +80,19 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
   }
 
   &__price {
     margin-bottom: 2.5rem;
+
+    @include tablet {
+      margin-bottom: 1rem;
+    }
   }
 
   &__capture {
@@ -63,6 +103,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #ce9a51;
+
+    @include tablet {
+      font-size: 1.6rem;
+    }
   }
 
   &__buttons {
@@ -70,6 +114,10 @@
     align-items: center;
     gap: 2rem;
     margin-bottom: 2.5rem;
+
+    @include tablet {
+      margin-bottom: 2rem;
+    }
   }
 
   &__btn {
@@ -77,10 +125,20 @@
     line-height: 1;
     font-size: 2rem;
 
+    @include tablet {
+      padding: 1.1rem 2.45rem;
+      font-size: 1.2rem;
+    }
+
     &--like {
       padding: 0;
       width: 4rem;
       height: 4rem;
+
+      @include tablet {
+        width: 2rem;
+        height: 2rem;
+      }
 
       svg {
         width: 100%;
@@ -93,6 +151,10 @@
   &__desc {
     margin-bottom: 2.5rem;
 
+    @include tablet {
+      margin-bottom: 1rem;
+    }
+
     p {
       margin: 0;
       font-family: var(--second-family);
@@ -100,6 +162,10 @@
       font-size: 2rem;
       line-height: 120%;
       color: var(--cvet-osnova);
+
+      @include tablet {
+        font-size: 1.2rem;
+      }
     }
   }
 }
@@ -110,12 +176,21 @@
   gap: 3.5rem;
   margin-bottom: 2.5rem;
 
+  @include tablet {
+    margin-bottom: 1rem;
+    gap: 2rem;
+  }
+
   &__quantity {
     font-weight: 400;
     font-size: 2rem;
     line-height: 120%;
     text-transform: uppercase;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
   }
 
   &__select {}
@@ -154,6 +229,12 @@
     align-items: center;
     justify-content: flex-end;
     padding: 0 2rem;
+
+    @include tablet {
+      width: 7rem;
+      height: 3rem;
+      padding: 0 1rem;
+    }
   }
 
   &__item {
@@ -191,8 +272,16 @@
   line-height: 120%;
   color: var(--cvet-osnova);
 
+  @include tablet {
+    font-size: 1.2rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: 2.5rem;
+
+    @include tablet {
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -200,6 +289,10 @@
   padding: 2.5rem 3.5rem;
   border-radius: 1rem;
   background-color: #f1f5ee;
+
+  @include tablet {
+    padding: 2rem;
+  }
 
   &__title {
     display: block;
@@ -209,6 +302,11 @@
     font-size: 3.2rem;
     line-height: 120%;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.6rem;
+      margin-bottom: 1.3rem;
+    }
   }
 
   &__desc {
@@ -218,6 +316,10 @@
     font-size: 2.4rem;
     line-height: 120%;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
   }
 }
 
