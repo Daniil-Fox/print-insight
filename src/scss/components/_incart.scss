@@ -1,6 +1,10 @@
 .incart {
   padding-top: 4rem;
 
+  @include tablet {
+    padding-top: 0;
+  }
+
   &__header {
     display: flex;
     align-items: center;
@@ -16,6 +20,10 @@
     line-height: 110%;
     letter-spacing: 0.03em;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 2.8rem;
+    }
   }
 
   &__slider {
@@ -27,6 +35,10 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__btn {

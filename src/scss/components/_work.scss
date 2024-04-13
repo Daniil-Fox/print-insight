@@ -21,6 +21,7 @@
       display: block;
       font-size: 8rem;
       font-size: 1.6rem;
+      line-height: 1;
     }
   }
 
@@ -35,7 +36,15 @@
 
   &__item {
     position: relative;
-    height: 100%;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      height: 42rem;
+
+      @include tablet {
+        height: 23.5rem;
+      }
+    }
 
     @include tablet {
       height: 23.5rem;

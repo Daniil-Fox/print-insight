@@ -1,11 +1,26 @@
 .pack-check {
   padding-top: 5rem;
   margin-bottom: 15rem;
+  position: relative;
 
   @include tablet {
     padding-top: 0;
     margin-bottom: 8rem;
+  }
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 16rem;
+    height: 17rem;
+    background-color: #000;
+    background-image: url('./../img/about/credo/ks.jpg');
+    background-position: center;
+    background-size: 95% 95%;
+    background-repeat: no-repeat;
   }
 
   &__container {

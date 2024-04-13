@@ -1,4 +1,15 @@
 .about-credo {
+  position: relative;
+  padding-top: 15rem;
+
+  &__pero {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45rem;
+    height: 33rem;
+  }
+
   @include tablet {
     padding-top: 8rem;
   }
@@ -45,12 +56,12 @@
   &__ks {
     position: absolute;
     left: 50%;
-    bottom: 6rem;
+    bottom: 2rem;
     transform: translate(-50%, 0);
 
     @include tablet {
-      left: 30%;
-      bottom: 12rem;
+      left: 35%;
+      bottom: 27rem;
     }
 
     img {

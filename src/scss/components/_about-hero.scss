@@ -1,5 +1,18 @@
 .about-hero {
-  padding-top: 14rem;
+  padding-top: 4rem;
+  position: relative;
+
+  &__boxes {
+    position: absolute;
+    top: 15.3rem;
+    left: 5.6rem;
+    width: 15rem;
+    height: 13rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
 
   @include tablet {
     padding-top: 7rem;
@@ -7,6 +20,7 @@
 
   &__container {
     display: flex;
+    align-items: center;
     gap: 9rem;
     position: relative;
 
@@ -17,14 +31,12 @@
 
   &__content {
     padding: 6.6rem 0;
-    text-align: center;
     width: 100%;
     max-width: 76.8rem;
 
     @include tablet {
       padding: 0;
       max-width: 100%;
-      text-align: left;
     }
   }
 
@@ -42,9 +54,8 @@
     &::before {
       content: "";
       position: absolute;
-      left: 50%;
+      left: 0;
       bottom: 0;
-      transform: translateX(-50%);
       height: 1rem;
       width: 18rem;
       background-image: url('./../img/backgrounds/green-dark.jpg');
@@ -55,8 +66,6 @@
       @include tablet {
         width: 3rem;
         height: 0.2rem;
-        transform: unset;
-        left: 0;
       }
     }
   }
@@ -69,8 +78,6 @@
     }
 
     span {
-      display: block;
-      margin-bottom: 3rem;
       font-family: var(--third-family);
       font-weight: 400;
       font-size: 3.2rem;
@@ -99,13 +106,6 @@
       max-width: 15.5rem;
     }
 
-    &:not(:last-child) {
-      margin-bottom: 3rem;
-
-      @include tablet {
-        margin-bottom: 0;
-      }
-    }
 
     &--orient {
       @include tablet {
@@ -119,9 +119,8 @@
 
   &__support {
     width: 100%;
-    max-width: 56rem;
-    margin: 0 auto;
     margin-bottom: 7.5rem;
+    max-width: 60rem;
 
     @include tablet {
 
@@ -132,62 +131,32 @@
     span {
       display: block;
       margin-bottom: 2rem;
-      font-family: var(--second-family);
-      font-weight: 300;
-      font-size: 3.2rem;
+      font-family: var(--third-family);
+      font-weight: 400;
+      font-size: 2.8rem;
       line-height: 120%;
       letter-spacing: 0.03em;
-      text-transform: uppercase;
-      text-align: center;
       color: var(--cvet-osnova);
 
       @include tablet {
-        max-width: 20rem;
         font-size: 1.2rem;
-        text-align: left;
-        margin-bottom: 0.5rem;
+        max-width: 17rem;
       }
     }
 
     p {
-      margin: 0;
-
       @include tablet {
         max-width: unset;
+
+        &:last-child {
+          margin-top: 1.5rem;
+          color: #282626;
+        }
       }
     }
   }
 
-  &__orient {
-    width: 100%;
-    max-width: 49rem;
-    margin: 0 auto;
-  }
 
-  &__icon {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    width: 10.8rem;
-    height: 10.8rem;
-    border-radius: 100%;
-    background-color: #d2cbc1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    outline: 1px solid #fff;
-    outline-offset: -.8rem;
-
-    @include tablet {
-      display: none;
-    }
-
-    img {
-      width: 8.5rem;
-      height: 8.5rem;
-      object-fit: contain;
-    }
-  }
 
   &__image {
     @include tablet {
@@ -234,6 +203,10 @@
   color: #515151;
 
   max-width: 47rem;
+
+  @include tablet {
+    font-size: 1.2rem;
+  }
 }
 
 .about-figure {

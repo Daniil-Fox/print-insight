@@ -9,6 +9,12 @@
     bottom: 3rem;
     width: 50rem;
     height: 50rem;
+
+    @include tablet {
+      width: 20rem;
+      height: 20rem;
+      right: -10rem;
+    }
   }
 
   @include tablet {

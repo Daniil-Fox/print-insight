@@ -7,8 +7,10 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      @include('partials/order-section.html')
-      @include('partials/incart.html')
+      <div class="order-wrapper">
+        @include('partials/order-section.html')
+        @include('partials/incart.html')
+      </div>
       @include('partials/menu.html')
     </main>
     @include('partials/footer.html')

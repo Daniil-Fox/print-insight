@@ -212,30 +212,15 @@
   padding: 0 .8rem;
   overflow: hidden;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    transform: translate(-50%, -80%) rotate(45deg);
-    background-color: #fff;
-  }
-
-  &::before {
-    top: 0;
-  }
-
-  &::after {
-    bottom: 0;
-    transform: translate(-50%, 80%) rotate(45deg);
-  }
+  mask-image: url('./../img/line-mask.svg');
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
 
   &--black {
 
     backdrop-filter: blur(13px);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(31, 47, 32, 0.8) 100%);
+    background: linear-gradient(180deg, #000 0%, rgba(31, 47, 32, 0.25) 100%);
+    ;
 
     .line__items {
       animation-direction: reverse;
@@ -244,7 +229,7 @@
 
   &--light {
     backdrop-filter: blur(13px);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(127, 127, 127, 0.8) 100%);
+    background: linear-gradient(180deg, #000 0%, #7f7f7f 100%);
   }
 
   &__wrapper {

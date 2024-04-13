@@ -3,6 +3,11 @@
     height: 33rem;
     margin-bottom: 0.6rem;
 
+    @include tablet {
+      height: 15rem;
+      margin-bottom: 1rem;
+    }
+
     img {
       height: 100%;
       width: 100%;
@@ -14,7 +19,12 @@
     align-items: center;
     justify-content: space-between;
 
-    gap: 1rem;
+    gap: 0 1rem;
+
+    @include tablet {
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
   }
 
   &__title {
@@ -24,6 +34,10 @@
     font-size: 1.6rem;
     line-height: 120%;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
   }
 
   &__buttons {
@@ -38,12 +52,22 @@
       height: 2.6rem;
       gap: .8rem;
       padding: .4rem 1rem;
+
+      @include tablet {
+        height: 2rem;
+        padding: .4rem;
+      }
     }
 
     .select__icon {
       width: 1.8rem;
       height: 1.8rem;
       flex-shrink: 0;
+
+      @include tablet {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
 
       svg {
         width: 100%;
@@ -54,6 +78,10 @@
     .select__input {
       height: 100%;
       padding: 0;
+
+      @include tablet {
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -64,5 +92,9 @@
     line-height: 120%;
     text-align: center;
     color: var(--cvet-osnova);
+
+    @include tablet {
+      font-size: 1.4rem;
+    }
   }
 }

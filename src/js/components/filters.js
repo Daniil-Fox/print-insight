@@ -10,7 +10,7 @@ if(filtersContainer){
     filtersContainer.classList.remove('active')
   })
 
-  const filtersButtons = filtersContainer.querySelectorAll('.filters__btn')
+  const filtersButtons = filtersContainer.querySelectorAll('.filter-head-btn')
   const filtersContent = filtersContainer.querySelectorAll('.filters__content')
   filtersButtons.forEach(btn => {
     btn.addEventListener('click', e => {

@@ -41,12 +41,10 @@
     }
 
     &.active {
+      background-color: var(--cvet-osnova);
+
       span {
         color: #fff;
-      }
-
-      &::before {
-        transform: translateX(0);
       }
     }
   }

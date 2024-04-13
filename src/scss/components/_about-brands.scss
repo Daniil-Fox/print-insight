@@ -106,22 +106,23 @@
     }
 
     &--big {
-      width: 62.2rem;
+      // width: 62.2rem;
       height: 9.4rem;
     }
 
     &--small {
-      width: 53.7rem;
+      // width: 53.7rem;
       height: 9.8rem;
     }
 
     &--medium {
-      width: 59.5rem;
+      // width: 59.5rem;
       height: 8.6rem;
     }
 
     img {
-      width: 100%;
+      // width: 100%;
+      width: auto;
       height: 100%;
       object-fit: contain;
     }

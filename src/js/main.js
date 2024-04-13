@@ -32,8 +32,8 @@ const rellax = new Rellax('.rellax', {
   center: 0.5
 });
 
-// import Lenis from '@studio-freight/lenis'
-// const lenis = new Lenis()
+import Lenis from '@studio-freight/lenis'
+const lenis = new Lenis()
 
 
 function raf(time) {
@@ -76,8 +76,10 @@ window.addEventListener('DOMContentLoaded', e => {
 import Cursor from "./vendor/cursor";
 import Magnetic from "./vendor/magnetic";
 
-const cursor = new Cursor();
-
+if(window.matchMedia('(min-width: 1025px)').matches){
+  const cursor = new Cursor();
+  cursor.setState('green-color')
+}
 
 // const magnetic = new Magnetic(el, {
 //   y: 0.2, // horizontal delta
@@ -86,4 +88,31 @@ const cursor = new Cursor();
 //   rs: 0.7 // release speed
 // });
 
-cursor.setState('green-color')
+
+
+
+// buttons
+var animateButton = function(e) {
+
+  e.preventDefault();
+  //reset animation
+  e.target.classList.remove('animate');
+
+  e.target.classList.add('animate');
+  setTimeout(function(){
+    e.target.classList.remove('animate');
+    if(e.target.href){
+      location.href = e.target.href
+    }
+  },700);
+
+
+};
+
+var bubblyButtons = document.querySelectorAll(".btn");
+
+for (var i = 0; i < bubblyButtons.length; i++) {
+  bubblyButtons[i].addEventListener('click',e => {
+    animateButton(e)
+  } , false);
+}

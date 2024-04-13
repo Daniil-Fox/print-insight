@@ -2,10 +2,20 @@
   padding-top: 20rem;
   padding-bottom: 10rem;
 
+  @include tablet {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 6rem 3rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem 1.2rem;
+    }
   }
 
   &__buttons {
@@ -16,20 +26,38 @@
     justify-content: space-between;
 
     gap: 2rem;
+
+    @include tablet {
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
   }
 
   &__btn {
+    font-size: 2rem;
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
+
     &--clear {
       font-weight: 400;
-      font-size: 2rem;
       line-height: 120%;
       text-transform: uppercase;
       color: var(--cvet-osnova);
+
+      @include tablet {
+        display: none;
+      }
+
     }
 
     &--add {
       padding: 1.8rem 8rem;
-      font-size: 2rem;
+
+      @include tablet {
+        padding: 1rem;
+      }
 
       svg {
         width: 3.7rem;

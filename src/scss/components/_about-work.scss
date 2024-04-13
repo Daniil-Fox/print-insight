@@ -1,5 +1,14 @@
 .about-work {
   margin-bottom: 14rem;
+  position: relative;
+
+  &__boxes {
+    position: absolute;
+    bottom: 12rem;
+    right: 5rem;
+    width: 17rem;
+    height: 14.8rem;
+  }
 
   @include tablet {
     margin-bottom: 6.7rem;

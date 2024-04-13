@@ -14,6 +14,10 @@
     top: -4rem;
     width: 15.8rem;
     height: 14.3rem;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__boxes {
@@ -22,12 +26,17 @@
     bottom: -36rem;
     width: 26.5rem;
     height: 20.8rem;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__container {
     display: flex;
     padding-left: 8rem;
     position: relative;
+    z-index: 4;
 
     @include tablet {
       padding: 0;
@@ -143,7 +152,7 @@
     @include tablet {
       height: 33.6rem;
       max-width: 28rem;
-      right: -10rem;
+      right: -5rem;
     }
 
     img {

@@ -152,9 +152,8 @@
     <article class="delivery-order__item order-item">
       <div class="order-item__image">
         <picture>
-          <source srcset="./img/order/01-2x.webp" media="(min-width: 1900px)">
           <source srcset="./img/order/01.webp">
-          <img src="./img/order/01.jpg" srcset="./img/order/01-2x.jpg 2x" alt="">
+          <img src="./img/order/01.jpg" alt="">
         </picture>
       </div>
       <div class="order-item__delivery order-item__title">
@@ -164,7 +163,7 @@
       <div class="order-item__content">
         <span class="order-item__name">Самовывоз</span>
         <span class="order-item__desc">г.Новосибирск ул. Королева 40 к 5, 2 этаж</span>
-        <a href="./contacts.html" class="order-item__btn btn">
+        <a href="./contacts.html" class="order-item__btn btn" data-cursor="-lg -white-cursor">
           <span>смотреть на карте</span>
           <svg width="72" height="8" viewBox="0 0 72 8" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -176,9 +175,8 @@
     <article class="delivery-order__item order-item">
       <div class="order-item__image">
         <picture>
-          <source srcset="./img/order/02-2x.webp" media="(min-width: 1900px)">
           <source srcset="./img/order/02.webp">
-          <img src="./img/order/02.jpg" srcset="./img/order/02-2x.jpg 2x" alt="">
+          <img src="./img/order/02.jpg" alt="">
         </picture>
       </div>
       <div class="order-item__content order-item__content--end">
@@ -254,7 +252,8 @@
             <label class="contacts-cta__label form__label">
               <input type="tel" class="input-reset form__input contacts-cta__input" placeholder="+7 (...) ...-..-..">
             </label>
-            <button class="btn-reset form__btn contacts-cta__btn">получить консультацию</button>
+            <button class="btn-reset form__btn contacts-cta__btn btn" data-cursor="-lg -white-cursor"><span>получить
+                консультацию</span></button>
           </div>
         </form>
       </div>
@@ -262,9 +261,8 @@
     <article class="delivery-order__item order-item">
       <div class="order-item__image">
         <picture>
-          <source srcset="./img/order/03-2x.webp" media="(min-width: 1900px)">
           <source srcset="./img/order/03.webp">
-          <img src="./img/order/03.jpg" srcset="./img/order/03-2x.jpg 2x" alt="">
+          <img src="./img/order/03.jpg" alt="">
         </picture>
       </div>
     </article>
@@ -273,55 +271,10 @@
       <div class="menu">
   <div class="menu__header header">
     <div class="header__container container">
-      <span class="header__city">
-        <img src="./img/map-icon.png" alt="">
-        Москва и мо
-      </span>
       <a href="./" class="logo header__logo">
         <span class="logo__top">Принт инсайт</span>
         <span class="logo__bottom">История уникального бренда</span>
       </a>
-      <div class="header__buttons">
-        <button class="header__btn btn-reset">
-          <img src="./img/search-icon.png" alt="">
-        </button>
-        <a href="./favorites.html" class="header__btn btn-reset">
-          <img src="./img/like-icon.svg" alt="">
-        </a>
-        <a href="./cart.html" class="header__btn btn-reset">
-          <img src="./img/cart-icon.png" alt="">
-        </a>
-      </div>
-    </div>
-    <div class="header__container header__container--center container">
-      <nav class="nav header__nav">
-        <ul class="list-reset nav__list">
-          <li class="nav__item">
-            <a href="./" class="nav__link">главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="./catalogue-gen.html" class="nav__link">каталог</a>
-          </li>
-          <li class="nav__item">
-            <a href="./services.html" class="nav__link">доп услуги</a>
-          </li>
-          <li class="nav__item">
-            <a href="./about.html" class="nav__link">о нас</a>
-          </li>
-          <li class="nav__item">
-            <a href="./delivery.html" class="nav__link">доставка</a>
-          </li>
-          <li class="nav__item">
-            <a href="./faq.html" class="nav__link">вопрос-ответ</a>
-          </li>
-          <li class="nav__item">
-            <a href="./contacts.html" class="nav__link">контакты</a>
-          </li>
-          <li class="nav__item">
-            <a href="./negative.html" class="nav__link">негатив</a>
-          </li>
-        </ul>
-      </nav>
     </div>
   </div>
   <div class="menu__body">
@@ -342,22 +295,22 @@
           <a href="./" class="menu-nav__link">Главная</a>
         </li>
         <li class="menu-nav__item">
-          <a href="./" class="menu-nav__link">О нас</a>
+          <a href="./about.html" class="menu-nav__link">О нас</a>
         </li>
         <li class="menu-nav__item">
-          <a href="./" class="menu-nav__link">Доп услуги</a>
+          <a href="./services.html" class="menu-nav__link">Доп услуги</a>
         </li>
         <li class="menu-nav__item">
-          <a href="./" class="menu-nav__link">Доставка</a>
+          <a href="./delivery.html" class="menu-nav__link">Доставка</a>
         </li>
         <li class="menu-nav__item">
-          <a href="./" class="menu-nav__link">Контакты</a>
+          <a href="./contacts.html" class="menu-nav__link">Контакты</a>
         </li>
         <li class="menu-nav__item">
-          <a href="./" class="menu-nav__link">Вопрос-ответ</a>
+          <a href="./faq.html" class="menu-nav__link">Вопрос-ответ</a>
         </li>
         <li class="menu-nav__item">
-          <a href="./" class="menu-nav__link">Негатив</a>
+          <a href="./negative.html" class="menu-nav__link">Негатив</a>
         </li>
         <li class="menu-nav__item menu-catalogue">
           <a class="menu-nav__link">Каталог</a>
