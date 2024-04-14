@@ -1,6 +1,10 @@
 .contacts-road {
   margin-bottom: 5rem;
 
+  @include tablet {
+    margin-bottom: 2rem;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -11,7 +15,16 @@
     }
   }
 
-  &__item {}
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      @include tablet {
+        margin-bottom: 2rem;
+      }
+    }
+  }
 
   &__image {
     margin-bottom: 2rem;
@@ -21,11 +34,16 @@
     @include tablet {
       height: 14rem;
       margin-bottom: 0;
+      order: 3;
 
     }
 
     &:not(:last-child) {
       margin-bottom: 2rem;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -95,8 +113,8 @@
     height: 4rem;
 
     @include tablet {
-      width: 1.8rem;
-      height: 1.8rem;
+      width: 1rem;
+      height: 1rem;
     }
 
     img {

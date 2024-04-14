@@ -50,6 +50,7 @@
   @include tablet {
     height: unset;
     min-height: 20.4rem;
+    position: relative;
   }
 
 
@@ -88,6 +89,7 @@
     padding-right: 8rem;
 
     @include tablet {
+      position: static;
       padding-right: 2rem;
     }
   }
@@ -102,6 +104,14 @@
     gap: 2rem;
     opacity: 0;
 
+    @include tablet {
+      opacity: 1;
+      right: .6rem;
+      top: .6rem;
+      transform: unset;
+
+    }
+
     // transition: opacity .5s ease-out;
   }
 
@@ -109,6 +119,17 @@
     display: block;
     width: 2.5rem;
     height: 2.5rem;
+
+    @include tablet {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+
+    &:first-child {
+      @include tablet {
+        display: none;
+      }
+    }
 
     img {
       width: 100%;

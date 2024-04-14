@@ -47,7 +47,9 @@
   }
 
   &__select {
-    .select__header {
+
+    .select__header,
+    .select__item {
       width: auto;
       height: 2.6rem;
       gap: .8rem;

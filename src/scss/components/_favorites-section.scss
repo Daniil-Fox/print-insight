@@ -7,6 +7,27 @@
     padding-bottom: 2rem;
   }
 
+  &__clear {
+    display: none;
+    margin-bottom: 2rem;
+
+    @include tablet {
+      display: block;
+      font-size: 1rem;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: var(--cvet-osnova);
+    }
+  }
+
+  &__header {
+    .item-header__back {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -61,6 +82,23 @@
 
       svg {
         width: 3.7rem;
+      }
+    }
+  }
+
+  &--cart {
+    .favorites-section__buttons {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .order-btn {
+      display: none;
+      margin: 2rem 0;
+
+      @include tablet {
+        display: inline-block;
       }
     }
   }

@@ -1,8 +1,22 @@
 .about-brands {
   padding: 8rem 0;
+  position: relative;
 
   @include tablet {
     padding: 3rem 0;
+  }
+
+  &__candy {
+    position: absolute;
+    left: 1.6rem;
+    top: 4.4rem;
+    width: 16.3rem;
+    height: 16.8rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__title {
@@ -20,7 +34,7 @@
       font-size: 1.6rem;
       font-weight: 500;
       color: var(--cvet-osnova);
-      margin: 1rem;
+      margin-bottom: 1rem;
     }
 
     &--end {
@@ -41,6 +55,10 @@
   &__block {
     &:not(:last-of-type) {
       margin-bottom: 13rem;
+
+      @include tablet {
+        margin-bottom: 3rem;
+      }
     }
   }
 
@@ -49,6 +67,16 @@
     align-items: center;
     justify-content: space-between;
 
+    a {
+      svg {
+        width: 16rem;
+
+        @include tablet {
+          width: 5rem;
+        }
+      }
+    }
+
     &:not(:last-of-type) {
       margin-bottom: 1.6rem;
     }
@@ -56,49 +84,82 @@
     &--end {
       justify-content: flex-end;
       margin-top: 4rem;
+
+      @include tablet {
+        margin-top: 2rem;
+      }
     }
 
-    &--head {
+    &--center,
+    &--tall,
+    &--head,
+    &--right {
       position: relative;
-      padding-left: 27rem;
 
       &::before {
         content: "";
         position: absolute;
         z-index: -1;
         top: 50%;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         right: 0;
-        width: 100%;
+        width: 200%;
         height: 1px;
         background-color: #887f7f;
+      }
+    }
+
+    &--center {
+      justify-content: center;
+
+    }
+
+    &--right {
+      justify-content: flex-end;
+      padding-right: 40rem;
+
+      @include tablet {
+        padding-right: 0;
+        padding-left: 8rem;
+        justify-content: flex-start;
+      }
+
+      &::before {
+        width: 100%;
+        transform: unset;
+
+        @include tablet {
+          width: 200%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    &--head {
+      padding-left: 27rem;
+
+      @include tablet {
+        padding-left: 8rem;
       }
     }
 
     &--tail {
       justify-content: flex-end;
       padding-right: 30rem;
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 50%;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #887f7f;
-      }
     }
   }
 
   &__item {
     background-color: #fff;
 
+
     &--top {
       margin-top: -6rem;
+
+      @include tablet {
+        margin-top: -1rem;
+      }
     }
 
     &--end {
@@ -106,18 +167,52 @@
     }
 
     &--big {
-      // width: 62.2rem;
       height: 9.4rem;
+
+      @include tablet {
+        height: 2rem;
+        width: 12.4rem;
+      }
+    }
+
+    &--tall {
+      height: 16rem;
+      max-width: 40rem;
+
+      @include tablet {
+        height: 3rem;
+      }
     }
 
     &--small {
       // width: 53.7rem;
       height: 9.8rem;
+
+      @include tablet {
+        height: 2.3rem;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
     }
 
     &--medium {
       // width: 59.5rem;
       height: 8.6rem;
+
+      @include tablet {
+        height: 2.3rem;
+        width: 16.4rem;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
     }
 
     img {

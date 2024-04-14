@@ -13,14 +13,20 @@
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translate(-50%, -50%);
-    width: 16rem;
+    transform: translate(-10%, -50%);
+    width: 9rem;
     height: 17rem;
     background-color: #000;
-    background-image: url('./../img/about/credo/ks.jpg');
+    background-image: url('./../img/about/credo/ks-mob.png');
     background-position: center;
     background-size: 95% 95%;
     background-repeat: no-repeat;
+
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__container {

@@ -1,15 +1,17 @@
 const menu = document.querySelector('.menu')
 
-const menuBtn = document.querySelector('.menu-btn')
+const menuBtn = document.querySelectorAll('.menu-btn')
 const menuClose = menu.querySelector('.menu__close')
 
-menuBtn.addEventListener('click', e => {
-  menu.classList.add('active')
-  document.body.style.overflow = 'hidden'
+menuBtn.forEach(btn => {
+  btn.addEventListener('click', e => {
+    menu.classList.add('active')
+    document.body.style.overflow = 'hidden'
+  })
 })
+
 menuClose.addEventListener('click', e => {
   menu.classList.remove('active')
-
   document.body.style.overflow = null
 })
 

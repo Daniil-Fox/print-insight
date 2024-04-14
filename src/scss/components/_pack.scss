@@ -178,6 +178,7 @@
 
   @include tablet {
     font-size: 1.2rem;
+    line-height: 130%;
   }
 
   &:not(:last-of-type) {

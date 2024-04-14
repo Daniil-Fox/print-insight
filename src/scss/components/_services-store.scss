@@ -21,6 +21,7 @@
     max-width: 75rem;
     display: flex;
     align-items: center;
+    max-width: 72rem;
 
     @include tablet {
       max-width: 80%;
@@ -98,6 +99,10 @@
 
     .swiper {
       margin-bottom: 2rem;
+
+      @include tablet {
+        margin-bottom: 0.5rem;
+      }
 
       .swiper-slide {
         &:nth-of-type(1) {

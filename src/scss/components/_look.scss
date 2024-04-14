@@ -140,6 +140,8 @@
   &__title {
     margin-bottom: 3rem;
     font-size: 3.2rem;
+    font-family: var(--font-family);
+    color: var(--cvet-osnova);
 
     @include tablet {
       font-size: 1.6rem;

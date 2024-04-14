@@ -209,12 +209,34 @@
   text-align: center;
   color: #fff;
   white-space: nowrap;
-  padding: 0 .8rem;
+  padding: 0 .4rem;
   overflow: hidden;
 
-  mask-image: url('./../img/line-mask.svg');
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
+  // mask-image: url('./../img/line-mask.svg');
+  // mask-size: 100% 100%;
+  // mask-repeat: no-repeat;
+  // mask-position: center;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    background: #ccc;
+  }
+
+  &::before {
+    top: 0;
+    transform: translate(-50%, -70%) rotate(45deg);
+
+  }
+
+  &::after {
+    bottom: 0;
+    transform: translate(-50%, 70%) rotate(45deg);
+  }
 
   &--black {
 
