@@ -147,6 +147,17 @@
     top: 50%;
     transform: translateY(-47%);
 
+    .shadow {
+      right: 11rem;
+      bottom: 14rem;
+      transform: rotateY(180deg);
+
+      @include tablet {
+        right: 1rem;
+        bottom: 4rem;
+      }
+    }
+
     @include tablet {
       height: 33.6rem;
       max-width: 28rem;

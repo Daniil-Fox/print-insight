@@ -16,9 +16,13 @@
 
   }
 
+  &__desc {
+    max-width: 87rem;
+  }
+
   &__content {
-    margin-left: 10rem;
-    max-width: 100rem;
+    margin-left: 20rem;
+    max-width: 101.2rem;
 
     @include tablet {
       max-width: 20rem;

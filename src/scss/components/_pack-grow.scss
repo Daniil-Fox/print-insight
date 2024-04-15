@@ -1,5 +1,5 @@
 .pack-grow {
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
   position: relative;
 
   @include tablet {
@@ -58,6 +58,6 @@
   }
 
   &__desc {
-    max-width: 73rem;
+    max-width: 83rem;
   }
 }

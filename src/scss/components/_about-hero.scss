@@ -1,5 +1,5 @@
 .about-hero {
-  padding-top: 4rem;
+  padding-top: 5rem;
   position: relative;
 
   &__boxes {
@@ -21,7 +21,7 @@
   &__container {
     display: flex;
     align-items: center;
-    gap: 9rem;
+    gap: 19rem;
     position: relative;
 
     @include tablet {
@@ -32,7 +32,7 @@
   &__content {
     padding: 6.6rem 0;
     width: 100%;
-    max-width: 76.8rem;
+    max-width: 67.3rem;
 
     @include tablet {
       padding: 0;
@@ -170,7 +170,7 @@
     }
 
     img {
-      max-height: 96.6rem;
+      max-height: 101rem;
       width: 100%;
       width: auto;
       object-fit: contain;

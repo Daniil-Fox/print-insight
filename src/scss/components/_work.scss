@@ -17,12 +17,12 @@
       margin-bottom: 3rem;
     }
 
-    span {
-      display: block;
-      font-size: 8rem;
-      font-size: 1.6rem;
-      line-height: 1;
-    }
+    // span {
+    //   display: block;
+    //   font-size: 8rem;
+    //   font-size: 1.6rem;
+    //   line-height: 1;
+    // }
   }
 
   &__container {
@@ -95,6 +95,12 @@
         &::before {
           opacity: 1;
         }
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        display: none;
       }
     }
   }

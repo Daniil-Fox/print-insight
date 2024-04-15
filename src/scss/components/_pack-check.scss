@@ -29,6 +29,8 @@
     }
   }
 
+
+
   &__container {
     max-width: var(--container-width);
     padding: var(--container-offset);
@@ -78,7 +80,7 @@
 
   &__candy {
     position: absolute;
-    right: 0;
+    right: 10rem;
     bottom: 0;
     width: 16.3rem;
     height: 16.8rem;
@@ -112,7 +114,7 @@
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
-      transform: scale(1.02);
+      transform: scale(1.04);
     }
 
     &:nth-child(1) {

@@ -18,14 +18,14 @@
   &__container {
     display: flex;
     align-items: center;
-    gap: 14rem;
-    margin-right: calc((100% - var(--container-width)) / 2);
+    gap: 12rem;
+    padding-right: 28.6rem;
     position: relative;
 
     @include tablet {
       display: block;
       gap: 0;
-      margin-right: 0;
+      padding-right: 0;
     }
   }
 
