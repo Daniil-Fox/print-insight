@@ -1,13 +1,10 @@
 .pack-grow {
-  margin-bottom: 5rem;
-
+  padding-bottom: 5rem;
   position: relative;
 
   @include tablet {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
-
-
 
   &__container {
     display: flex;

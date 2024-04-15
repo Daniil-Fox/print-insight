@@ -8,9 +8,9 @@ new Swiper('.look__slider', {
   loop: true,
   // centeredSlides: true,
   initialSlide: 2,
-  autoplay: {
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   disableOnInteraction: false,
+  // },
   speed: 1000,
 })
 

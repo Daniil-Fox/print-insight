@@ -46,11 +46,9 @@
   &__content {
     display: flex;
     align-items: flex-start;
-    margin-right: 6rem;
     position: relative;
 
     @include tablet {
-      margin-right: 0;
       padding-right: 13.7rem;
       padding-left: 2.4rem;
       padding-top: 4.6rem;
@@ -59,7 +57,7 @@
 
   &__text {
     width: 100%;
-    max-width: 60rem;
+    max-width: 61.5rem;
     position: relative;
   }
 
@@ -101,7 +99,7 @@
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
-            transform: scale(1.12);
+            transform: scale(1.02);
           }
         }
 
@@ -147,7 +145,7 @@
     z-index: -1;
     right: -12rem;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-47%);
 
     @include tablet {
       height: 33.6rem;

@@ -59,6 +59,7 @@ $baby-blue: #f8faff;
   }
 
   &:before {
+    pointer-events: none;
     display: none;
     top: -75%;
     background-image:
@@ -76,6 +77,7 @@ $baby-blue: #f8faff;
   }
 
   &:after {
+    pointer-events: none;
     display: none;
     bottom: -75%;
     background-image:
@@ -93,6 +95,16 @@ $baby-blue: #f8faff;
   &:hover {
 
     background-color: var(--cvet-osnova);
+
+    &:before {
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+
+    &:after {
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
 
     span {
       color: #fff;

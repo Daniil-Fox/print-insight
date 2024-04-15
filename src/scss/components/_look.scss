@@ -1,16 +1,17 @@
 .look {
   position: relative;
+  background: linear-gradient(180deg, #fff 0%, #efebe2 100%);
 
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #fff 0%, #efebe2 100%);
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: -1;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   // background: linear-gradient(180deg, #fff 0%, #efebe2 100%);
+  // }
 
   &__container {
     display: flex;
@@ -74,12 +75,17 @@
       width: auto;
       height: auto;
       margin-right: 9rem;
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
 
       @include tablet {
         margin-right: 2rem;
       }
 
-      &-active {
+      @include hover {
         .look-slide {
           height: 60rem;
 
@@ -192,6 +198,7 @@
     font-weight: 300;
     font-size: 2.4rem;
     color: #fff;
+    transition: background-color .3s ease-out;
 
     @include tablet {
       font-size: 1.2rem;

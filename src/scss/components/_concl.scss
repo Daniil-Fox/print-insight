@@ -1,18 +1,32 @@
 .concl {
   position: relative;
-  min-height: 168rem;
-  background-image: url('./../img/girls-2-2x.webp'), linear-gradient(180deg, #fefefd 0%, #d6d1c8 20.41%, #666667 61%, #484849 78.8%, #252526 100%);
-  background-position: center;
-  background-size: cover;
+  z-index: 4;
+  min-height: 160rem;
+
+  background-image: url('./../img/girls-2-2x.png'), linear-gradient(180deg, #efebe2 0%, #d9d5cd 18.46%, #000 100%);
+  background-position: bottom;
+  background-size: 100% auto;
   background-repeat: no-repeat;
 
   display: flex;
   flex-direction: column;
 
+  // background-color: #d4d1ca;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 40rem;
+    width: 120%;
+    backdrop-filter: blur(5px);
+  }
+
   @include tablet {
     min-height: 54.4rem;
     background-position: center;
-    background-image: url('./../img/girls-2-2x.webp');
+    background-image: url('./../img/girls-2-2x.png');
     background-color: #d4d1ca;
   }
 
@@ -22,12 +36,13 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(#000, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to top, #ddd8d1, #d9d5cd, transparent);
+    mix-blend-mode: multiply;
   }
 
   &__container {
     flex-grow: 1;
-    padding-top: 8.3rem;
+    padding-top: 6.4rem;
     padding-bottom: 24.4rem;
     display: flex;
     flex-direction: column;
