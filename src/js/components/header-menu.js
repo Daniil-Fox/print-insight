@@ -5,10 +5,14 @@ const headerSearch = document.querySelector('.header-search')
 const header = document.querySelector('.header')
 
 const headerMenu = document.querySelector('.header__menu')
+const catalogueMenu = header.querySelector('.header-catalogue')
+const catalogueBtn = header.querySelector('#catalogue-nav')
+
 
 let isHeaderActive = false
 let isNavActive = false
 let isSearchActive = false
+
 headerMenu.addEventListener('click', e => {
 
   if(e.target.classList.contains('header-nav-btn')){
@@ -19,7 +23,7 @@ headerMenu.addEventListener('click', e => {
     if(isSearchActive){
       headerSearch.style.maxHeight = null
       headerSearch.classList.remove('active')
-      isHeaderActive = false
+      isSearchActive = false
     }
 
 
@@ -31,6 +35,8 @@ headerMenu.addEventListener('click', e => {
       isNavActive = false
       if(!isSearchActive){
         header.classList.remove('active')
+        catalogueMenu.style.maxHeight = null
+        catalogueMenu.classList.remove('active')
       }
     }
   }
@@ -51,13 +57,23 @@ headerMenu.addEventListener('click', e => {
 
     if(isSearchActive){
       headerSearch.style.maxHeight = headerSearch.scrollHeight + 'px'
+      catalogueMenu.style.maxHeight = null
+      catalogueMenu.classList.remove('active')
     } else {
       headerSearch.style.maxHeight = null
       headerSearch.classList.remove('active')
       isSearchActive = false
       if(!isNavActive){
         header.classList.remove('active')
+        catalogueMenu.style.maxHeight = null
+        catalogueMenu.classList.remove('active')
       }
     }
   }
+})
+
+
+catalogueBtn.addEventListener('click', e => {
+  let isActive = catalogueMenu.classList.toggle('active')
+  catalogueMenu.style.maxHeight = isActive ? '500px' : null
 })

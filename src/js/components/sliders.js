@@ -6,11 +6,7 @@ new Swiper('.look__slider', {
   modules: [Autoplay],
   slidesPerView: 'auto',
   loop: true,
-  // centeredSlides: true,
   initialSlide: 2,
-  // autoplay: {
-  //   disableOnInteraction: false,
-  // },
   speed: 1000,
 })
 
@@ -168,7 +164,6 @@ if(servicesItems && servicesItems.length > 0){
   const options = {
     slidesPerView: 1,
     modules: [Navigation, Pagination, Autoplay, EffectFade],
-    // loop: true,
     autoplay: {
       disableOnInteraction: false,
     },
@@ -179,7 +174,7 @@ if(servicesItems && servicesItems.length > 0){
 
     speed: 1000,
     pagination: {
-      el: '.services-store__pagination',
+      el: '.swiper-pagination',
       clickable: true
     },
     navigation: {
@@ -189,6 +184,7 @@ if(servicesItems && servicesItems.length > 0){
     }
   }
 
+  options.pagination.el = servicesTabs[0].querySelector('.swiper-pagination')
 
   let swiper = new Swiper(servicesTabs[0].querySelector('.swiper'), options);
   servicesItems.forEach((item, index) => {
@@ -201,6 +197,8 @@ if(servicesItems && servicesItems.length > 0){
       active.classList.add('active')
 
       const slider = active.querySelector('.swiper')
+      const pagination = active.querySelector('.swiper-pagination')
+      options.pagination.el = pagination
       swiper = new Swiper(slider, options);
     })
   })
