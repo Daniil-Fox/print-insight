@@ -33,10 +33,10 @@
 
   &-text {
     position: absolute;
-    top: -1.8rem;
-    left: -1.8rem;
-    width: 3.6rem;
-    height: 3.6rem;
+    top: -18px;
+    left: -18px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,8 +45,8 @@
     opacity: 0;
     color: white;
 
-    font-size: 1.6rem;
-    line-height: 2rem;
+    font-size: 16px;
+    line-height: 20px;
     text-align: center;
     letter-spacing: -0.01em;
 
@@ -85,11 +85,11 @@
 
   &.-visible {
     &:before {
-      transform: scale(0.1);
+      transform: scale(0.3);
     }
 
     &.-active:before {
-      transform: scale(0.23);
+      transform: scale(0.4);
       transition-duration: 0.2s;
     }
   }
@@ -107,7 +107,7 @@
 
     &:before {
       opacity: 0.85;
-      transform: scale(1.7);
+      transform: scale(0.8);
     }
 
     #{$root} {

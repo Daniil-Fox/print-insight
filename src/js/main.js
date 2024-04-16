@@ -43,6 +43,15 @@ function raf(time) {
 
 requestAnimationFrame(raf)
 
+document.querySelectorAll('.services-nishes__anchor')?.forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    lenis.scrollTo(this.getAttribute('href'))
+  });
+})
+
+
+
 window.addEventListener('DOMContentLoaded', e => {
   const mainVideo = document.querySelector('.hero__video video')
 
@@ -68,7 +77,17 @@ window.addEventListener('DOMContentLoaded', e => {
   observer.observe(mainVideo)
 })
 
-
+const header = document.querySelector('.header')
+const logo = header.querySelector('.header__logo')
+if(window.matchMedia('(min-width: 1025px)').matches && !document.querySelector('.hero')){
+  window.addEventListener('scroll', e => {
+    if(window.scrollY > 1){
+      logo.style.opacity = 0
+    } else {
+      logo.style.opacity = 1
+    }
+  })
+}
 
 
 // cursor
@@ -80,13 +99,6 @@ if(window.matchMedia('(min-width: 1025px)').matches){
   const cursor = new Cursor();
   cursor.setState('green-color')
 }
-
-// const magnetic = new Magnetic(el, {
-//   y: 0.2, // horizontal delta
-//   x: 0.2, // vertical delta
-//   s: 0.2, // speed
-//   rs: 0.7 // release speed
-// });
 
 
 

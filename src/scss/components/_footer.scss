@@ -1,6 +1,6 @@
 .footer {
 
-  background-color: #222423;
+  background-color: #fff;
 
   @include tablet {
     position: fixed;
@@ -9,7 +9,6 @@
     right: 0;
     padding: 0.9rem 2.4rem;
     z-index: 999;
-    background-color: #fff;
   }
 
   &__top {
@@ -61,12 +60,10 @@
   &__logo {
     .logo__top {
       font-size: 4rem;
-      color: #fff;
     }
 
     .logo__bottom {
       font-size: 2rem;
-      color: #fff;
     }
   }
 
@@ -89,7 +86,7 @@
     font-weight: 400;
     font-size: 1.6rem;
     text-transform: uppercase;
-    color: #fff;
+    color: #131313;
   }
 
   &__link {
@@ -101,12 +98,44 @@
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.06);
 
     svg {
+      width: 75%;
+      height: 75%;
+
       transition: stroke .3s ease-out;
+      object-fit: contain;
+
+      fill: #131313;
     }
   }
 
   &__capture {
     margin-bottom: 1rem;
+  }
+
+  &--dark {
+    background-color: #222423;
+
+    .logo {
+
+      &__top,
+      &__bottom {
+        color: #fff;
+      }
+    }
+
+    .footer-nav {
+      &__link {
+        color: #fff;
+      }
+    }
+
+    .footer {
+
+      &__capture,
+      &__value {
+        color: #fff;
+      }
+    }
   }
 }
 
@@ -124,7 +153,7 @@
     font-weight: 300;
     font-size: 1.6rem;
     text-transform: uppercase;
-    color: #fff;
+    color: #131313;
   }
 }
 

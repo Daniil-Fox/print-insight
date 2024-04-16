@@ -161,6 +161,8 @@
 
 
   &__image {
+    position: relative;
+
     @include tablet {
       position: absolute;
       z-index: -1;
@@ -174,6 +176,21 @@
       width: 100%;
       width: auto;
       object-fit: contain;
+    }
+  }
+
+  .shadow {
+    right: -20rem;
+    bottom: -2rem;
+    width: 70rem;
+    height: 68rem;
+    transform: rotateY(180deg);
+
+    @include tablet {
+      width: 20rem;
+      height: 15rem;
+      right: -5rem;
+      bottom: 3rem;
     }
   }
 }

@@ -5,10 +5,14 @@
 
   &__boxes {
     position: absolute;
-    bottom: 12rem;
+    bottom: 0rem;
     right: 5rem;
     width: 17rem;
     height: 14.8rem;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   @include tablet {

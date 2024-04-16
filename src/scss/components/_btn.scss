@@ -98,11 +98,13 @@ $baby-blue: #f8faff;
 
     &:before {
       display: block;
+      z-index: 1;
       animation: topBubbles ease-in-out 0.75s forwards;
     }
 
     &:after {
       display: block;
+      z-index: 1;
       animation: bottomBubbles ease-in-out 0.75s forwards;
     }
 

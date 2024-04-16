@@ -6,13 +6,13 @@ gsap.registerPlugin(ScrollTrigger)
 // if(window.matchMedia('(min-width: 1025px)').matches){
 
   const tl = gsap.timeline()
-  let percent = -100
+  let percent = "-65vh"
 
   if(window.matchMedia('(max-width: 1024px)').matches){
-    percent = -200
+    percent = "-30vh"
   }
   tl.to('.credo-first', {yPercent: -50, opacity: 0})
-  tl.fromTo('.about-credo__ks', {xPercent: -50}, {yPercent: percent}, "<")
+  tl.fromTo('.about-credo__ks', {xPercent: -50}, {y: percent}, "<")
   tl.fromTo('.credo-second', {yPercent: 50, xPercent: -100, opacity: 0}, {yPercent: 0, opacity: 1})
 
   ScrollTrigger.create({

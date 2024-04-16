@@ -1,5 +1,18 @@
 .faq-section {
   padding-top: 20rem;
+  position: relative;
+
+  &__candy {
+    position: absolute;
+    right: 0;
+    top: 18rem;
+    width: 20rem;
+    height: 12.8rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
 
   @include tablet {
     padding-top: 7rem;

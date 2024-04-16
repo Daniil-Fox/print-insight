@@ -1,9 +1,18 @@
 .about-cta {
   padding-top: 12.5rem;
   padding-bottom: 7rem;
+  position: relative;
 
   @include tablet {
     padding: 3rem 0;
+  }
+
+  &__boxes {
+    position: absolute;
+    right: 4.4rem;
+    top: 11.7rem;
+    width: 15rem;
+    height: 15rem;
   }
 
   &__title {

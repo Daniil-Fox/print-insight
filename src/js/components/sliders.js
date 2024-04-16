@@ -15,65 +15,65 @@ new Swiper('.look__slider', {
 })
 
 
-const serviceSlider = new Swiper('.services-store__slider>.swiper', {
-  slidesPerView: 1,
-  modules: [Navigation, Pagination, Autoplay, EffectFade],
-  // loop: true,
-  autoplay: {
-    disableOnInteraction: false,
-  },
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true,
-  },
+// const serviceSlider = new Swiper('.services-store__slider>.swiper', {
+//   slidesPerView: 1,
+//   modules: [Navigation, Pagination, Autoplay, EffectFade],
+//   // loop: true,
+//   autoplay: {
+//     disableOnInteraction: false,
+//   },
+//   effect: 'fade',
+//   fadeEffect: {
+//     crossFade: true,
+//   },
 
-  speed: 1000,
-  pagination: {
-    el: '.services-store__pagination',
-    clickable: true
-  },
-  navigation: {
-    prevEl: '.services-store__btn--prev',
-    nextEl: '.services-store__btn--next',
+//   speed: 1000,
+//   pagination: {
+//     el: '.services-store__pagination',
+//     clickable: true
+//   },
+//   navigation: {
+//     prevEl: '.services-store__btn--prev',
+//     nextEl: '.services-store__btn--next',
 
-  }
-})
-
-
-const serviceContentSlider = new Swiper('.services-store__content-slider', {
-  slidesPerView: 1,
-  modules: [EffectFade],
-
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true,
-  },
-  speed: 1000,
-})
+//   }
+// })
 
 
-const serviceTitleSlider = new Swiper('.services-store__title-slider', {
-  slidesPerView: 1,
-  modules: [EffectFade],
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true,
-  },
-  speed: 1000,
-})
+// const serviceContentSlider = new Swiper('.services-store__content-slider', {
+//   slidesPerView: 1,
+//   modules: [EffectFade],
 
-serviceSlider.on('slideChange', (swiper) => {
-  serviceContentSlider.slideTo(serviceSlider.activeIndex)
-  serviceTitleSlider.slideTo(serviceSlider.activeIndex)
-})
-serviceTitleSlider.on('slideChange', (swiper) => {
-  serviceSlider.slideTo(serviceTitleSlider.activeIndex)
-  serviceContentSlider.slideTo(serviceTitleSlider.activeIndex)
-})
-serviceContentSlider.on('slideChange', (swiper) => {
-  serviceSlider.slideTo(serviceContentSlider.activeIndex)
-  serviceTitleSlider.slideTo(serviceContentSlider.activeIndex)
-})
+//   effect: 'fade',
+//   fadeEffect: {
+//     crossFade: true,
+//   },
+//   speed: 1000,
+// })
+
+
+// const serviceTitleSlider = new Swiper('.services-store__title-slider', {
+//   slidesPerView: 1,
+//   modules: [EffectFade],
+//   effect: 'fade',
+//   fadeEffect: {
+//     crossFade: true,
+//   },
+//   speed: 1000,
+// })
+
+// serviceSlider.on('slideChange', (swiper) => {
+//   serviceContentSlider.slideTo(serviceSlider.activeIndex)
+//   serviceTitleSlider.slideTo(serviceSlider.activeIndex)
+// })
+// serviceTitleSlider.on('slideChange', (swiper) => {
+//   serviceSlider.slideTo(serviceTitleSlider.activeIndex)
+//   serviceContentSlider.slideTo(serviceTitleSlider.activeIndex)
+// })
+// serviceContentSlider.on('slideChange', (swiper) => {
+//   serviceSlider.slideTo(serviceContentSlider.activeIndex)
+//   serviceTitleSlider.slideTo(serviceContentSlider.activeIndex)
+// })
 
 const itemThumbs = new Swiper('.thumbs__slider', {
   slidesPerView: 4,
@@ -159,3 +159,56 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   );
 });
+
+
+const servicesItems = document.querySelectorAll('[data-tab-item]')
+const servicesTabs = document.querySelectorAll('[data-tab-content]')
+
+if(servicesItems && servicesItems.length > 0){
+  const options = {
+    slidesPerView: 1,
+    modules: [Navigation, Pagination, Autoplay, EffectFade],
+    // loop: true,
+    autoplay: {
+      disableOnInteraction: false,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+
+    speed: 1000,
+    pagination: {
+      el: '.services-store__pagination',
+      clickable: true
+    },
+    navigation: {
+      prevEl: '.services-store__btn--prev',
+      nextEl: '.services-store__btn--next',
+
+    }
+  }
+
+
+  let swiper = new Swiper(servicesTabs[0].querySelector('.swiper'), options);
+  servicesItems.forEach((item, index) => {
+    item.addEventListener('click', e => {
+      clearTabsActive(swiper)
+
+      const dataset = item.dataset.tabItem;
+      let active = [...servicesTabs].find(item => item.dataset.tabContent == dataset)
+
+      active.classList.add('active')
+
+      const slider = active.querySelector('.swiper')
+      swiper = new Swiper(slider, options);
+    })
+  })
+
+  function clearTabsActive(swiper){
+    if (swiper !== undefined) swiper.destroy(true, true);
+    servicesTabs.forEach(el => {
+      el.classList.remove('active')
+    })
+  }
+}

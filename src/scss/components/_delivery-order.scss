@@ -18,6 +18,8 @@
   }
 
   &__form {
+    padding: 2.5rem;
+
     @include tablet {
       padding: 0;
     }

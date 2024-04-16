@@ -3,6 +3,16 @@
   box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.1);
   background: radial-gradient(104.66% 104.66% at 50% 0%, rgb(255, 255, 255) 0%, rgb(195, 220, 203) 100%);
   position: relative;
+  width: 32.6rem;
+  padding-right: 0;
+
+  &:not(:last-child) {
+    margin-right: 8rem;
+
+    @include tablet {
+      margin-right: 0;
+    }
+  }
 
   @include tablet {
     width: 90%;

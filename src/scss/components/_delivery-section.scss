@@ -1,9 +1,18 @@
 .delivery-section {
   padding-top: 18rem;
   margin-bottom: 12rem;
+  position: relative;
 
   @include tablet {
     padding-top: 9rem;
+  }
+
+  &__candy {
+    position: absolute;
+    left: 0;
+    top: 16rem;
+    width: 12rem;
+    height: 17rem;
   }
 
   &__title {
@@ -56,13 +65,21 @@
   &__row {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
     gap: 8rem;
+    position: relative;
 
     @include tablet {
       flex-direction: column;
       gap: 2rem;
     }
+  }
+
+  &__boxes {
+    position: absolute;
+    right: -16rem;
+    top: 0;
+    width: 15.8rem;
+    height: 15.4rem;
   }
 
   &__wraning {
@@ -88,9 +105,9 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 300%;
+    width: 200%;
     height: 100%;
-    background-image: url('./../img/backgrounds/green-dark.jpg');
+    background-image: url('./../img/backgrounds/green-dark.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

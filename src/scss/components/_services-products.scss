@@ -2,6 +2,19 @@
   padding-top: 10rem;
   padding-bottom: 7rem;
   background: linear-gradient(180deg, #fff 0%, #efebe2 100%);
+  position: relative;
+
+  &__boxes {
+    position: absolute;
+    left: 2.8rem;
+    top: 5.4rem;
+    width: 13.9rem;
+    height: 15.8rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
 
   @include tablet {
     padding-top: 5rem;
@@ -141,6 +154,12 @@
       height: 100%;
       width: 100%;
     }
+
+    @include hover {
+      .services-products__text {
+        opacity: 1;
+      }
+    }
   }
 
   &__text {
@@ -155,6 +174,8 @@
     font-size: 2.4rem;
     color: #fff;
     background-color: var(--cvet-osnova);
+    opacity: 0;
+    transition: opacity .3s ease-out;
 
     @include tablet {
       font-size: 1.4rem;
