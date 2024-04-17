@@ -54,34 +54,35 @@ document.querySelectorAll('.services-nishes__anchor')?.forEach(anchor => {
 
 window.addEventListener('DOMContentLoaded', e => {
   const mainVideo = document.querySelector('.hero__video video')
+  if(mainVideo){
+    const srcMob = mainVideo.dataset.srcMob
+    const srcDesc = mainVideo.dataset.src
 
-  const srcMob = mainVideo.dataset.srcMob
-  const srcDesc = mainVideo.dataset.src
+    if(window.matchMedia('(max-width: 1024px)').matches){
+      mainVideo.src = srcMob
+    } else {
+      mainVideo.src = srcDesc
+    }
+    // mainVideo.play()
 
-  if(window.matchMedia('(max-width: 1024px)').matches){
-    mainVideo.src = srcMob
-  } else {
-    mainVideo.src = srcDesc
+    const observer = new IntersectionObserver((entries, observer) => {
+        if(entries[0].isIntersecting){
+          mainVideo.play()
+        } else {
+          mainVideo.pause()
+        }
+    }, {
+      threshold: 0.1
+    })
+    observer.observe(mainVideo)
   }
-  // mainVideo.play()
-
-  const observer = new IntersectionObserver((entries, observer) => {
-      if(entries[0].isIntersecting){
-        mainVideo.play()
-      } else {
-        mainVideo.pause()
-      }
-  }, {
-    threshold: 0.1
-  })
-  observer.observe(mainVideo)
 })
 
 const header = document.querySelector('.header')
 const logo = header.querySelector('.header__logo')
 if(window.matchMedia('(min-width: 1025px)').matches && !document.querySelector('.hero')){
   window.addEventListener('scroll', e => {
-    if(window.scrollY > 1){
+    if(window.scrollY > 35){
       logo.style.opacity = 0
     } else {
       logo.style.opacity = 1

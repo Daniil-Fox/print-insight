@@ -9,6 +9,10 @@
     top: 17rem;
     width: 16.6rem;
     height: 19rem;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   @include tablet {
