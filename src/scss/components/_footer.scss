@@ -1,6 +1,11 @@
 .footer {
 
   background-color: #fff;
+  border-top: 1px solid rgba(#000, 0.2);
+
+  &--gradient {
+    background: linear-gradient(to bottom, #EFEBE1, #fff 50%);
+  }
 
   @include tablet {
     position: fixed;
@@ -114,6 +119,10 @@
 
   &--dark {
     background-color: #222423;
+
+    @include tablet {
+      background-color: #fff;
+    }
 
     .logo {
 

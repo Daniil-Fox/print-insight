@@ -21,7 +21,11 @@ if(menu){
 
   catalogueMenu.addEventListener('click', e => {
     e.preventDefault()
-    console.log('click');
+    catalogueMenu.addEventListener('click', e => {
+      location.href = catalogueMenu.href
+    })
+
+
     const catalogueMenuItems = menu.querySelector('.menu-dropdown__list')
 
 

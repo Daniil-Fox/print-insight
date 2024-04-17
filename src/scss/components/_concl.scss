@@ -3,35 +3,33 @@
   z-index: 4;
   min-height: 160rem;
 
-  background-image: url('./../img/girls-2-2x.png'), linear-gradient(180deg, #ddd8d1 0%, #d9d5cd 18.46%, #000 100%);
-  background-position: bottom;
-  background-size: cover;
+  background-image: url('./../img/pack/concl.png');
+  background-position: center bottom;
+  background-size: auto 122rem;
   background-repeat: no-repeat;
 
   display: flex;
   flex-direction: column;
 
   // background-color: #d4d1ca;
-  &::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-    height: 7rem;
-    width: 120%;
-    backdrop-filter: blur(5px);
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   top: 0;
+  //   height: 7rem;
+  //   width: 120%;
+  //   backdrop-filter: blur(5px);
 
-    @include tablet {
-      display: none;
-    }
-  }
+  //   @include tablet {
+  //     display: none;
+  //   }
+  // }
 
   @include tablet {
     min-height: 54.4rem;
-    background-position: center;
-    background-image: url('./../img/girls-2-2x.png');
-    background-color: #d4d1ca;
+    background-size: auto 40rem;
   }
 
   &__overlay {
@@ -40,7 +38,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #000, transparent);
+    background: linear-gradient(to top, #000000b5, transparent);
     // mix-blend-mode: multiply;
   }
 

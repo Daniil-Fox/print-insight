@@ -30,13 +30,8 @@
   }
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-
 
     @include tablet {
-      display: flex;
       gap: 1.8rem;
 
     }
@@ -85,6 +80,11 @@
 
 .mood-slider {
   margin-bottom: 4rem;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
 
   @include tablet {
     margin-bottom: 1.6rem;

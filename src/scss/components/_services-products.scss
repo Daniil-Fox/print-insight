@@ -11,6 +11,15 @@
     width: 13.9rem;
     height: 15.8rem;
 
+    &:nth-child(2) {
+      width: 14.7rem;
+      height: 15.8rem;
+      left: unset;
+      top: unset;
+      bottom: 7rem;
+      right: 7rem;
+    }
+
     @include tablet {
       display: none;
     }

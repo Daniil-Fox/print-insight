@@ -28,6 +28,11 @@
     line-height: 120%;
     letter-spacing: 0.01em;
     color: #000;
+
+    @include tablet {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
   }
 
   &__title {
@@ -82,9 +87,58 @@
     &.active {
       display: block;
     }
+
+    &[data-tab-content="clothes"] {
+      .swiper {
+        background-color: #eae7e2;
+      }
+    }
+
+    &[data-tab-content="bed"] {
+      .swiper {
+        background-color: #d3d2d5;
+      }
+    }
+
+    &[data-tab-content="cosmetics"] {
+      .swiper {
+        background-color: #f0efec;
+      }
+    }
+
+    &[data-tab-content="flowers"] {
+      .swiper {
+        background-color: #e5e4e1;
+      }
+    }
+
+    &[data-tab-content="perfume"] {
+      .swiper {
+        background-color: #dbdad6;
+      }
+    }
+
+    &[data-tab-content="underwear"] {
+      .swiper {
+        background-color: #e8e5e1;
+      }
+    }
+
+    &[data-tab-content="agent"] {
+      .swiper {
+        background-color: #dedbd4;
+      }
+    }
+
+    &[data-tab-content="other"] {
+      .swiper {
+        background-color: #dfdeda;
+      }
+    }
   }
 
   &__slider {
+    flex-shrink: 0;
     width: 70%;
     position: relative;
 
@@ -100,7 +154,7 @@
       width: 12rem;
       height: 100%;
       top: 0;
-      left: 32.2rem;
+      left: 33.2rem;
       border-right: .5rem solid #fff;
       border-left: .5rem solid #fff;
 
@@ -117,29 +171,32 @@
       }
 
       .swiper-slide {
-        &:nth-of-type(1) {
-          background-color: #eae7e2;
-        }
+        width: 100%;
+        max-width: 107.3rem;
+        // background-color: #eae7e2;
+        // &:nth-of-type(1) {
+        //   background-color: #eae7e2;
+        // }
 
-        &:nth-of-type(2) {
-          background-color: #dbdad6;
-        }
+        // &:nth-of-type(2) {
+        //   background-color: #dbdad6;
+        // }
 
-        &:nth-of-type(3) {
-          background-color: #f0efec;
-        }
+        // &:nth-of-type(3) {
+        //   background-color: #f0efec;
+        // }
 
-        &:nth-of-type(4) {
-          background-color: #e5e4e1;
-        }
+        // &:nth-of-type(4) {
+        //   background-color: #e5e4e1;
+        // }
 
-        &:nth-of-type(5) {
-          background-color: #d3d2d5;
-        }
+        // &:nth-of-type(5) {
+        //   background-color: #d3d2d5;
+        // }
 
-        &:nth-of-type(6) {
-          background-color: #dfddd9;
-        }
+        // &:nth-of-type(6) {
+        //   background-color: #dfddd9;
+        // }
       }
     }
   }
@@ -151,7 +208,7 @@
   }
 
   &__frame {
-    flex: 1 0 44.6rem;
+    flex: 1 0 33.6rem;
 
     @include tablet {
       display: none;
@@ -224,10 +281,12 @@
 
   &__image {
     height: 62rem;
+    width: 100%;
 
     img {
       width: 100%;
       height: 100%;
+      object-position: top;
 
       @include tablet {
         object-position: top center;

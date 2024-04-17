@@ -68,7 +68,7 @@
     flex-direction: column;
     justify-content: flex-end;
     margin-right: 13rem;
-    transform: translateY(25rem);
+    transform: translateY(22rem);
 
     @include tablet {
       display: none;
@@ -84,7 +84,7 @@
           width: 27.4rem;
           height: 25.3rem;
           margin-left: auto;
-          margin-bottom: -5rem;
+          margin-bottom: -6rem;
           margin-right: -8.3rem;
 
           &::before {
@@ -148,13 +148,17 @@
     transform: translateY(-47%);
 
     .shadow {
-      right: 11rem;
+      right: 6rem;
       bottom: 14rem;
+      width: 60rem;
+      height: 65rem;
       transform: rotateY(180deg);
 
       @include tablet {
         right: 1rem;
         bottom: 4rem;
+        width: 20rem;
+        height: 20rem;
       }
     }
 

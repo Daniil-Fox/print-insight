@@ -25,56 +25,100 @@
     // }
   }
 
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  &__wrapper {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translate(10rem, -50%);
+    left: 0;
+    width: 18vw;
+    height: 18vw;
+    border-radius: 100%;
+    background-image: url('./../img/backgrounds/green-dark.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @include tablet {
-      grid-template-columns: 1fr;
+      background-image: url('./../img/backgrounds/green-dark-rot.jpg');
     }
   }
 
-  &__item {
+  &__row {
+    display: flex;
     position: relative;
 
-    &:nth-child(1),
-    &:nth-child(2) {
+    @include tablet {
+      flex-direction: column;
+    }
+
+    &:nth-of-type(1) {
       height: 42rem;
 
       @include tablet {
-        height: 23.5rem;
+        height: unset;
       }
     }
 
+    &:nth-of-type(2) {
+
+      .work__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .work__image {
+        width: 30rem;
+        height: 30rem;
+        border-radius: 30rem;
+        overflow: hidden;
+      }
+    }
+  }
+
+  // &__container {
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+
+
+  //   @include tablet {
+  //     grid-template-columns: 1fr;
+  //   }
+  // }
+
+  &__item {
+    position: relative;
+    flex: 1 1 50%;
+
     @include tablet {
-      height: 23.5rem;
+      flex: unset;
+      width: 100%;
+      height: 12.8rem;
+    }
+
+    &--animate {
+      opacity: 0;
+
+      @include tablet {
+        height: 21.4rem;
+      }
     }
 
     &--form {
-      background-image: url('./../img/backgrounds/green-dark.jpg');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
       position: relative;
       padding: 8.4rem 19rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      transform: translateY(90%);
+      opacity: 0;
+      backdrop-filter: blur(2.4rem);
+      background: rgba(14, 14, 14, 0.6);
 
       @include tablet {
         height: unset;
         padding: 4.5rem 3rem;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(2.4rem);
-        background: rgba(14, 14, 14, 0.6);
       }
     }
 

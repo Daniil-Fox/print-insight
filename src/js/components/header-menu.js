@@ -6,7 +6,7 @@ const header = document.querySelector('.header')
 
 const headerMenu = document.querySelector('.header__menu')
 const catalogueMenu = header.querySelector('.header-catalogue')
-const catalogueBtn = header.querySelector('#catalogue-nav')
+const catalogueBtn = header.querySelector('.catalogue-nav')
 
 
 let isHeaderActive = false
@@ -74,6 +74,11 @@ headerMenu.addEventListener('click', e => {
 
 
 catalogueBtn.addEventListener('click', e => {
+  e.preventDefault()
+
+  catalogueBtn.addEventListener('click', e => {
+    location.href = catalogueBtn.href
+  })
   let isActive = catalogueMenu.classList.toggle('active')
   catalogueMenu.style.maxHeight = isActive ? '500px' : null
 })

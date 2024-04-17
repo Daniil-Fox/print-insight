@@ -53,9 +53,11 @@
 
   &__figure {
     left: 14rem;
+    top: 2rem;
 
     @include tablet {
       left: 0;
+      top: 0;
     }
 
     &::after {

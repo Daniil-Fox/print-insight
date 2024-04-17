@@ -1,11 +1,6 @@
 .pack {
   padding-top: 10rem;
 
-  @include tablet {
-    padding-top: 7.5rem;
-    background: linear-gradient(180deg, #fff 0%, #f4f2ed 54.5%, #d4d1ca 100%);
-  }
-
   &__title {
     margin: 0;
     margin-bottom: 10rem;
@@ -110,8 +105,16 @@
       }
 
       .shadow {
-        left: 0;
+        width: 55.8rem;
+        height: 55rem;
+        left: -6rem;
         bottom: 0;
+
+        @include tablet {
+          left: 0;
+          width: 25rem;
+          height: 25rem;
+        }
       }
     }
 
