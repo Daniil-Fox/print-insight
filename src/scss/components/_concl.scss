@@ -11,21 +11,17 @@
   display: flex;
   flex-direction: column;
 
-  // background-color: #d4d1ca;
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   top: 0;
-  //   height: 7rem;
-  //   width: 120%;
-  //   backdrop-filter: blur(5px);
+  &__boxes {
+    position: absolute;
+    right: 6rem;
+    top: 6rem;
+    width: 20rem;
+    height: 20rem;
 
-  //   @include tablet {
-  //     display: none;
-  //   }
-  // }
+    @include tablet {
+      display: none;
+    }
+  }
 
   @include tablet {
     min-height: 54.4rem;

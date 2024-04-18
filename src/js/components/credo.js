@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
   let percent = "-65vh"
 
   if(window.matchMedia('(max-width: 1024px)').matches){
-    percent = "-30vh"
+    percent = "-30svh"
   }
   tl.to('.credo-first', {yPercent: -50, opacity: 0})
   tl.fromTo('.about-credo__ks', {xPercent: -50}, {y: percent}, "<")

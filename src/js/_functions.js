@@ -76,11 +76,79 @@ console.log(mobileCheck())
 //   console.log(e.detail.dir);
 // });
 
-// import { validateForms } from './functions/validate-forms';
-// const rules1 = [...];
+import { validateForms } from './functions/validate-forms';
+const rules1 = [
+  {
+    ruleSelector: '.input-name',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Неправильно заполнено поле'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel',
+    tel: true,
+    telError: 'Введите корректный телефон',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Неправильно заполнено поле'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-email',
+    rules: [
+      {
+        rule: 'required',
+        errorMessage: 'Неправильно заполнено поле'
+      },
+      {
+        rule: 'email',
+        errorMessage: 'Неправильно заполнено поле'
+      },
+    ]
+  },
+];
+const rules2 = [
+  {
+    ruleSelector: '.input-name',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel',
+    tel: true,
+    telError: 'Введите корректный телефон',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  }
+];
+const afterForm = () => {
+  alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время!');
+};
 
-// const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
-// };
-
-// validateForms('.form-1', rules1, afterForm);
+validateForms('.form-main', rules1, afterForm, '.form__agreement');
+validateForms('.form-sec', rules2, afterForm);

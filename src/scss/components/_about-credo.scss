@@ -68,8 +68,8 @@
     transform: translate(-50%, 0);
 
     @include tablet {
-      left: 35%;
-      bottom: 27rem;
+      left: 12rem;
+      bottom: 24.5svh;
     }
 
     img {
@@ -91,7 +91,7 @@
     @include tablet {
       flex-grow: 1;
       flex-direction: column;
-      gap: 2rem;
+      gap: 3rem;
     }
 
     &--end {

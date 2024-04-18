@@ -107,16 +107,13 @@ if(window.matchMedia('(min-width: 1025px)').matches){
 // buttons
 var animateButton = function(e) {
 
-  e.preventDefault();
+  // e.preventDefault();
   //reset animation
   e.target.classList.remove('animate');
 
   e.target.classList.add('animate');
   setTimeout(function(){
     e.target.classList.remove('animate');
-    if(e.target.href){
-      location.href = e.target.href
-    }
   },700);
 
 
@@ -129,3 +126,11 @@ for (var i = 0; i < bubblyButtons.length; i++) {
     animateButton(e)
   } , false);
 }
+
+
+
+import 'owl.carousel';
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    smartSpeed: 300,
+  });

@@ -5,6 +5,11 @@ html {
   @media (max-width: 1024px) {
     font-size: calc(100vw / 36);
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 1px;
+  }
 }
 
 // html,
@@ -299,4 +304,35 @@ a {
     height: 100%;
     object-fit: cover;
   }
+}
+
+.owl-stage {
+  display: flex;
+  align-items: flex-end;
+  gap: 9rem;
+
+  // transition: 1s;
+  @media (max-width: 1024px) {
+    gap: 2rem;
+  }
+}
+
+.owl-item {
+  float: unset !important;
+  width: auto !important;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 120%;
+  text-transform: lowercase;
+  color: #c80000;
+}
+
+.just-validate-error-field {
+  color: #c80000 !important;
 }

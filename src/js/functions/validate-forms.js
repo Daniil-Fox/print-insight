@@ -1,12 +1,12 @@
 import JustValidate from 'just-validate';
 import Inputmask from "inputmask";
 
-export const validateForms = (selector, rules, afterSend) => {
+export const validateForms = (selector, rules, afterSend, checkbox) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
 
   if (!form) {
-    console.error('Нет такого селектора!');
+    console.log('Нет такого селектора!');
     return false;
   }
 
@@ -39,7 +39,10 @@ export const validateForms = (selector, rules, afterSend) => {
     validation
       .addField(item.ruleSelector, item.rules);
   }
-
+  if(checkbox){
+    validation
+    .addRequiredGroup(checkbox, 'поле обязательно для заполнения');
+  }
   validation.onSuccess((ev) => {
     let formData = new FormData(ev.target);
 

@@ -5,7 +5,7 @@
   margin-bottom: 6.5rem;
 
   @include tablet {
-    min-height: unset;
+    min-height: auto;
 
   }
 
@@ -43,6 +43,7 @@
     @include tablet {
       position: static;
       transform: unset;
+      height: 42.3rem;
     }
 
     img {

@@ -2,13 +2,14 @@ import {Navigation, Pagination, Swiper, Thumbs} from 'swiper'
 import { Autoplay } from 'swiper'
 import { EffectFade } from 'swiper'
 
-new Swiper('.look__slider', {
-  modules: [Autoplay],
-  slidesPerView: 'auto',
-  loop: true,
-  initialSlide: 2,
-  speed: 1000,
-})
+// new Swiper('.look__slider', {
+//   modules: [Autoplay],
+//   slidesPerView: 'auto',
+//   // loop: true,
+//   // initialSlide: 2,
+//   // speed: 1000,
+//   spaceBetween: 90,
+// })
 
 
 const itemThumbs = new Swiper('.thumbs__slider', {

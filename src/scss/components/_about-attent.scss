@@ -5,6 +5,20 @@
   position: relative;
   z-index: 2;
 
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: -2rem;
+    left: 0rem;
+    width: 100%;
+    height: 7rem;
+    background: linear-gradient(to bottom, transparent, #e1dbd6 70%);
+
+    @include tablet {
+      display: none;
+    }
+  }
 
   @include tablet {
     min-height: unset;
@@ -24,7 +38,9 @@
 
     @include tablet {
       position: static;
+      height: 34rem;
       order: 4;
+      height: auto;
     }
 
     &::after {
@@ -61,6 +77,10 @@
       display: block;
       width: auto;
       height: 100%;
+
+      @include tablet {
+        width: 100%;
+      }
     }
   }
 

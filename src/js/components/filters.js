@@ -12,16 +12,30 @@ if(filtersContainer){
 
   const filtersButtons = filtersContainer.querySelectorAll('.filter-head-btn')
   const filtersContent = filtersContainer.querySelectorAll('.filters__content')
+
+
+
   filtersButtons.forEach(btn => {
     btn.addEventListener('click', e => {
       clearActive()
       const data = btn.dataset.filterBtn
 
       const currentContent = filtersContainer.querySelector(`.filters__content[data-filters-content="${data}"]`)
+
       btn.classList.add('active')
       currentContent.classList.add('active')
     })
   })
+  filtersContent.forEach(content => {
+    const contentButtons = content.querySelectorAll('.filters__btn')
+
+    contentButtons.forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.currentTarget.classList.toggle('active')
+      })
+    })
+  })
+
 
   function clearActive(){
     filtersButtons.forEach(btn => btn.classList.remove('active'))

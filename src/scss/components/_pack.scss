@@ -1,6 +1,10 @@
 .pack {
   padding-top: 10rem;
 
+  @include tablet {
+    padding-top: 4rem;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 10rem;
